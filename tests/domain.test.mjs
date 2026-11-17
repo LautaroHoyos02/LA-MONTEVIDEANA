@@ -1,0 +1,12 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';
+import {totals,parseCSV,csvEscape} from '../public/domain.js';
+import {config,seedProducts} from '../public/data.js';
+test('minorista: precio, descuento y envío se calculan con datos del catálogo',()=>{const r=totals([{id:'p01',qty:2,price:1}],seedProducts,config,{delivery:'delivery',coupon:'LIBERTAD10'});assert.equal(r.subtotal,13600);assert.equal(r.couponDiscount,1360);assert.equal(r.shipping,2500);assert.equal(r.total,14740)});
+test('mayorista: el mínimo se aplica a cada producto, la escala de volumen al carrito',()=>{const r=totals([{id:'p01',qty:6},{id:'p02',qty:6}],seedProducts,config,{wholesale:true,coupon:'LIBERTAD10',delivery:'delivery'});assert.equal(r.subtotal,6*seedProducts[0].wholesale+6*seedProducts[1].wholesale);assert.equal(r.volume,Math.round(r.subtotal*.05));assert.equal(r.couponDiscount,Math.round((r.subtotal-r.volume)*.1));assert.equal(r.shipping,0);assert.equal(r.total,r.subtotal-r.volume-r.couponDiscount)});
+test('mayorista: sin mínimo se conserva el precio minorista',()=>{const r=totals([{id:'p01',qty:5}],seedProducts,config,{wholesale:true});assert.equal(r.subtotal,34000)});
+test('stock agotado e IDs desconocidos no ingresan al total',()=>{const r=totals([{id:'p20',qty:1},{id:'inexistente',qty:1}],seedProducts,config);assert.equal(r.count,0);assert.equal(r.total,0)});
+test('cantidad limitada por stock y redondeada a entero',()=>{const r=totals([{id:'p01',qty:1000.5}],seedProducts,config);assert.equal(r.count,24)});
+test('cupón inválido o debajo del mínimo no descuenta',()=>{assert.equal(totals([{id:'p01',qty:1}],seedProducts,config,{coupon:'LIBERTAD10'}).couponDiscount,0);assert.equal(totals([{id:'p01',qty:2}],seedProducts,config,{coupon:'inventado'}).couponDiscount,0)});
+test('CSV interpreta comillas, saltos y separadores dentro de celdas',()=>{assert.deepEqual(parseCSV('\uFEFFid,stock,nombre\r\np01,5,"Crema, vainilla"\r\np02,8,"Dice ""hola"""'),[['id','stock','nombre'],['p01','5','Crema, vainilla'],['p02','8','Dice "hola"']]);assert.throws(()=>parseCSV('id\n"sin cerrar'))});
+test('CSV exportado neutraliza fórmulas y escapa comillas',()=>{assert.equal(csvEscape('=1+2'),'"\'=1+2"');assert.equal(csvEscape('a"b'),'"a""b"')});
+test('catálogo DEMO: IDs únicos, imágenes y precios válidos',()=>{assert.equal(new Set(seedProducts.map(p=>p.id)).size,seedProducts.length);for(const p of seedProducts){assert.ok(p.price>0);assert.ok(p.wholesale<=p.price);assert.ok(p.image.startsWith('/assets/'));assert.ok(Number.isInteger(p.stock));}});
