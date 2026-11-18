@@ -1,60 +1,37 @@
-# Arquitectura y decisiones
+# Arquitectura — La Montevideana
 
-## Entrega actual
+## Modelo comercial corregido
 
-Se implementó una aplicación web con vistas navegables mediante URL hash, HTML semántico, CSS y módulos JavaScript. No es una maqueta: los recorridos operan sobre estado persistente local; sin embargo, **no es el backend comercial**.
+- Clientes: heladerías y comercios.
+- Productos envasados. Una cantidad representa una caja o un bulto completo.
+- Un único precio mayorista por producto/presentación, sin minoristas ni aprobaciones de lista.
+- El pedido se inicia en la página. La consulta previa de stock es opcional y está disponible en producto, carrito y checkout.
+- Pago anticipado obligatorio. Preparación y despacho requieren acreditación verificable.
+- Costo, día y horario de entrega se coordinan por WhatsApp; no se asignan ni se incluyen automáticamente.
+- Precio inicial $0 significa pendiente, no gratuito. Un pedido con esos precios no puede ser cobrado ni tratado como pagado.
 
-El alcance inicial autorizado prioriza la validación visual y funcional. Se eligió un artefacto estático sin dependencias de ejecución para poder compartir una versión privada sin abrir cuentas de terceros ni solicitar credenciales. Esto difiere del stack comercial recomendado (Next.js y PostgreSQL/Supabase). No se presenta el almacenamiento local como una alternativa segura para producción.
+## Implementación actual
 
-Separación de responsabilidades:
+Aplicación con vistas navegables por URL hash, HTML, CSS y módulos JavaScript. El estado persiste solo en localStorage. Se mantiene el alcance DEMO anterior: no es una base compartida ni autenticación comercial.
 
-- `public/data.js`: configuración inicial y catálogo provisional.
-- `public/domain.js`: precios, descuentos, totales y CSV.
-- `public/app.js`: vistas, navegación, formularios y adaptador local de estado.
-- `public/styles.css`: tokens visuales, componentes y responsive.
-- `public/assets/`: recursos reemplazables, independientes de IDs y cálculos.
-- `scripts/build.mjs`: copia reproducible de recursos a `dist/`.
-- `tests/`: pruebas de reglas comerciales y recorridos con DOM simulado.
+`data.js` centraliza marca, recursos iniciales, WhatsApp y catálogo. `domain.js` implementa totales, estado de precios, unidades de venta, stock, texto y URL de WhatsApp. `app.js` contiene vistas y gestión local. Las fotos se sustituyen por ID/ruta sin afectar cálculos.
 
-No se implementaron roles falsamente seguros, contraseñas locales, aprobaciones de pago inventadas ni contactos que puedan pertenecer a terceros. Las aprobaciones mayoristas del panel son simulaciones locales explícitas.
+Se eliminó la lógica de dos listas de precios, aprobación mayorista, cupones y descuentos por volumen. Se eliminaron costos fijos y envío sin cargo. La ausencia de precio de entrega se representa con `null`, no con cero.
 
-## Arquitectura comercial propuesta
+Stock: `null` es desconocido; cero es agotado informado. Guardar una solicitud no reserva ni descuenta existencias. La consulta de WhatsApp no cambia el stock a confirmado. Abrir el chat no demuestra envío ni respuesta.
 
-Una aplicación modular: Next.js + TypeScript, PostgreSQL administrado, Supabase Auth y Storage. Un módulo de API controla autorización, precios, stock y pedidos. Las imágenes y la identidad mantienen referencias reemplazables. El despliegue comercial propuesto es Vercel + Supabase; confirmar costos y compatibilidad al integrar. Esta publicación privada en Sites no provisiona esas cuentas.
+Pedidos: pendientes de precio o de pago; no procesados ni aprobados. `canDispatch` requiere pago acreditado, precios válidos e importe positivo. La interfaz no tiene un botón que invente acreditaciones. La integración comercial deberá hacer esta comprobación en el servidor.
 
-Módulos: catálogo; clientes y direcciones; listas de precios; mayoristas; promociones; pedidos; inventario; proveedores de pago; logística; auditoría.
+Los datos de la primera demo se conservan en una clave separada. No se reutilizan los precios o pedidos del negocio anteriormente nombrado.
 
-Modelo relacional previsto:
+## Arquitectura comercial recomendada
 
-- users, profiles, addresses
-- roles, permissions, role_permissions, user_roles
-- wholesale_applications, commercial_terms
-- brands, categories, products, product_variants, product_images
-- price_lists, prices, quantity_tiers
-- carts, cart_lines, favorites
-- orders, order_lines, order_events
-- inventory, stock_reservations, stock_movements
-- payment_attempts, provider_events
-- promotions, coupons, redemptions
-- shipping_zones, delivery_slots, business_settings
-- audit_events
+Se mantiene Next.js + TypeScript y PostgreSQL/Supabase como objetivo de integración comercial, con autenticación y almacenamiento administrados. El stack estático actual facilita la revisión, pero no reemplaza el backend.
 
-Cada línea de pedido conserva nombre, precio, impuestos, descuentos y presentación del momento de compra. Los productos vendidos se desactivan; no se borra el historial.
+Modelo: perfiles comerciales, roles/permisos, productos/variantes, imágenes, presentación de venta y contenido por presentación, precio mayorista, stock y movimientos, pedidos/líneas históricas, intentos de pago, eventos del proveedor, coordinación de entrega y auditoría.
 
-## Reglas de la demostración
+La coordinación de entrega tendrá costo, fecha y franja horaria nullable hasta su acuerdo. Una cotización de entrega no debe considerarse gratis por estar ausente. El cobro del costo acordado debe definirse antes de la operación real.
 
-1. Precio minorista salvo cuenta DEMO aprobada y mínimo mayorista por producto satisfecho.
-2. Descuento por volumen sobre el subtotal si el carrito alcanza la cantidad configurada.
-3. Cupón sobre el subtotal menos descuento por volumen. Umbral calculado con subtotal original.
-4. Envío sin cargo desde el umbral de subtotal; de lo contrario, costo fijo DEMO. Retiro sin cargo.
-5. Al crear el pedido se descuenta stock local. Cancelarlo lo devuelve una única vez y cierra ese pedido.
-6. Recompra utiliza precios, actividad y stock actuales. El pedido anterior no se modifica.
-7. CSV de inventario valida el archivo completo antes de permitir aplicar cambios.
+Stock y precio se validan en servidor al confirmar. Cada línea conserva presentación y precio del momento. Pagos y notificaciones requieren idempotencia. Autorización por rol en cada API; dos cuentas independientes para propietario y técnico; empleados con permisos restringidos.
 
-## Controles necesarios en producción
-
-Autorización de cada operación en servidor; precios mayoristas fuera de respuestas anónimas; contraseñas y sesiones delegadas al proveedor; validación y límites de solicitudes; restricciones por usuario; auditoría protegida; transacciones para inventario y reservas con expiración; idempotencia en pedidos y pagos; verificación de notificaciones; protección de secretos y archivos; retención y copias con restauración probada.
-
-Dos administradores independientes (propietario y técnico), sin cuentas compartidas ni autoasignación de privilegios. Empleados con permisos por módulo y acción.
-
-Pedido, pago y entrega tendrán estados independientes. La redirección de un navegador no confirma un pago. El proveedor será consultado del lado servidor y sus notificaciones se deduplicarán.
+No se debe tomar un mensaje, una captura de transferencia, una redirección o una marca local como acreditación bancaria. La regla de pago previo se aplica antes de habilitar estados operativos.

@@ -1,37 +1,25 @@
-# Estado de la entrega · 17 de noviembre de 2026
+# Estado — 18 de noviembre de 2026
 
-## Implementado como DEMO local
+## Corregido
 
-- Inicio, catálogo, producto, ofertas, nosotros, contacto, ayuda y condiciones.
-- 20 productos ficticios, marcas de ejemplo, imágenes ilustrativas, identidad provisional.
-- Búsqueda sin distinguir tildes, categorías, marcas, sabores, disponibilidad, orden y carga progresiva.
-- Favoritos, carrito, cantidades, stock, cupón y descuentos por volumen.
-- Checkout con cobertura DEMO, retiro, entrega y confirmación sin cobro.
-- Perfil ficticio, direcciones, historial y recompra.
-- Solicitud mayorista y cambios de aprobación, rechazo o suspensión.
-- Panel DEMO: productos, imágenes, pedidos, clientes, promociones, inventario, configuración y actividad.
-- Exportaciones CSV, neutralización de fórmulas, importación validada con revisión previa.
-- Copia JSON local, restablecimiento y actualización de estado entre pestañas.
+Nombre: La Montevideana. Enfoque: distribuidor para heladerías; productos por caja o bulto. Precio único mayorista con $0 pendiente de carga. Sin precios minoristas, solicitudes de aprobación mayorista ni descuentos inventados.
 
-## Pendiente para operar
+Consulta previa de stock por WhatsApp preparada con el detalle del pedido. Entrega con costo, día y horario pendientes de coordinación. Pago anticipado requerido y estados operativos bloqueados sin acreditación.
 
-- Backend persistente y migraciones de base de datos.
-- Registro y acceso comercial, recuperación de contraseña y permisos del servidor.
-- Cuentas independientes de propietario y técnico; permisos de empleados.
-- Credenciales de prueba de Mercado Pago, firma/validación de notificaciones e idempotencia.
-- Notificaciones transaccionales, recuperación de carritos y WhatsApp oficial.
-- Reserva de stock transaccional y protección frente a compras simultáneas.
-- Reglas avanzadas de promociones, vigencias y conciliación de pagos.
-- Logística, conservación, fichas de alérgenos, costos e impuestos confirmados.
-- Dominio propio, contactos oficiales, términos comerciales y privacidad revisados.
-- Copias remotas, monitoreo y prueba de restauración.
+Se conservan catálogo, favoritos, cantidades, solicitudes, historial, recompra, edición de productos/fotos, stock, CSV, configuración y auditoría como funcionalidades locales DEMO.
+
+## Bloqueo de recursos adjuntos
+
+`LA MONTEVIDEANA.zip` supera el límite de transferencia de 32 MiB. No se pudo abrir, extraer ni comprobar su contenido. No se incorporaron fotografías o logo de ese ZIP ni se extrajeron sus colores. Faltan el logo separado y archivos de fotos menores de 32 MB. Los productos son referencias orientativas, no inventario confirmado.
+
+## Datos pendientes
+
+Número comercial de WhatsApp. La UI permite configurarlo con código de país; mientras esté vacío solo prepara texto para copiar. No se inventó un teléfono. La consulta de stock se preparó por WhatsApp como opción por defecto pendiente de confirmación del usuario.
+
+Cantidades exactas por caja/bulto, fichas, marcas, stock real y precios deben verificarse con el catálogo original. Integración de pago anticipado y base compartida siguen pendientes; no se habilitaron ventas.
 
 ## Verificación
 
-- Verificación de sintaxis JavaScript y build sin dependencias de ejecución.
-- 14 pruebas automatizadas: 9 de reglas comerciales y CSV y 5 de recorridos con DOM simulado. Todas aprobadas.
-- Pruebas de interfaz con DOM simulado: documentadas en los tests. No sustituyen revisión visual en un navegador.
-- La vista previa administrada falló al crear la conexión de navegador en el puerto 4173 (`timed out waiting for relay readiness`); `sites-preview status` informó detenido. No se modificó infraestructura para eludir el fallo.
-- La revisión visual real, navegación con lector de pantalla y dispositivos móviles físicos quedan sin verificar en esta entrega.
+Pruebas automatizadas de precio único, $0 pendiente, ausencia de tarifa de entrega, stock desconocido, cantidades por empaque, enlaces/mensajes WhatsApp y bloqueo de despacho sin pago. Recorridos con DOM simulado: solicitud, editor de precio cero, consulta y compatibilidad con datos anteriores.
 
-No se hicieron pruebas de pagos reales ni de credenciales inexistentes. Un despliegue correcto solo acredita publicación; no habilitación comercial.
+Resultado: 17 pruebas automatizadas aprobadas; sintaxis y build correctos. La vista previa administrada volvió a fallar al abrir la conexión de navegador en el puerto 4173 (timed out waiting for relay readiness); no se verificó visualmente en navegador. Las pruebas con DOM simulado no equivalen a una revisión visual ni a pagos bancarios reales.

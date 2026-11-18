@@ -1,36 +1,17 @@
-# Preparación para operación comercial
+# Activación comercial — pendiente
 
-La entrega actual puede usarse para evaluar diseño y recorridos. No conectar un medio de cobro a esta versión local.
+Antes de operar:
 
-## Orden de integración
+- Incorporar logo y colores inspeccionados, fotos reales y catálogo verificado por producto/presentación.
+- Confirmar contenido por caja/bulto, un único precio mayorista, stock, fichas y conservación.
+- Confirmar WhatsApp comercial y políticas de cobertura/entrega. El costo, día y horario se acuerdan por ese canal. Definir cómo se paga el costo de entrega acordado.
+- Integrar base compartida, cuentas seguras, roles de propietario/técnico y autorización del servidor.
+- Implementar consulta de disponibilidad y validación de stock/precio en servidor al confirmar. No convertir la consulta opcional en reserva ficticia.
+- Integrar proveedor de pago en pruebas, notificaciones firmadas, consulta al proveedor e idempotencia. No despachar hasta el pago acreditado.
+- Mantener pedidos con precios $0 bloqueados para cobro: cero es pendiente, no gratuito.
+- Confirmar facturación ARCA, impuestos y textos legales argentinos aplicables, protección de datos y condiciones del negocio.
+- Probar compras simultáneas, notificaciones duplicadas, fallos de pago, permisos, móvil y recuperación de backups.
 
-1. Confirmar datos del negocio, contacto oficial, listas de precios, impuestos, comprobantes y condiciones mayoristas.
-2. Provisionar ambiente de pruebas separado del comercial, PostgreSQL, autenticación y almacenamiento; documentar propiedad de cada cuenta.
-3. Crear esquema, migraciones, permisos y políticas de acceso; importar el catálogo provisional como semilla de pruebas.
-4. Sustituir el adaptador local por API: catálogo, precios autorizados, favoritos, perfil, direcciones, solicitudes, pedidos e inventario.
-5. Incorporar reservas transaccionales, expiración, validación de importes e idempotencia.
-6. Agregar Mercado Pago en modo prueba. Verificar que importe, moneda, referencia y cuenta receptora coincidan. Validar firma y consultar al proveedor. No confiar en parámetros del navegador.
-7. Configurar correo y WhatsApp reales únicamente con datos confirmados y autorización para comunicaciones.
-8. Validar cobertura, horarios, capacidad, frío, alérgenos y condiciones de conservación.
-9. Completar controles legales argentinos, facturación ARCA, derechos y privacidad; revisar qué reglas aplican a productos perecederos/congelados.
-10. Probar navegación móvil, autorización entre usuarios, compras simultáneas, errores de proveedor, notificaciones duplicadas, reembolsos, copia y restauración.
+Variables orientativas: URL/clave pública de Supabase; clave de servicio solo en servidor; token y secreto webhook de Mercado Pago solo en servidor; correo transaccional. Ninguna credencial de cobro está configurada en esta demo.
 
-## Variables previstas (nombres orientativos)
-
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-- `SUPABASE_SERVICE_ROLE_KEY` — exclusivamente servidor, nunca NEXT_PUBLIC.
-- `MERCADOPAGO_ACCESS_TOKEN` — exclusivamente servidor.
-- `MERCADOPAGO_WEBHOOK_SECRET` — exclusivamente servidor.
-- `EMAIL_PROVIDER_API_KEY` — exclusivamente servidor.
-- `APP_URL`
-
-No hay credenciales configuradas en la entrega actual. No guardar secretos en el repositorio, formularios DEMO, capturas o configuración visual.
-
-## Copias y recuperación
-
-La exportación JSON actual es solo una copia manual del estado DEMO de este navegador. Producción requiere backups del proveedor de base de datos, copia de archivos, política de retención y restauración probada en un ambiente independiente.
-
-## SEO
-
-La versión DEMO declara `noindex,nofollow`. Retirar esa restricción únicamente en la tienda oficial, con metadatos por producto, sitemap, URL canónica y datos estructurados que reflejen información comercial confirmada.
+No implementar pago contra entrega: contradice la regla comercial confirmada. Los estados de entrega y pago deben permanecer separados. Nunca acreditar pagos desde el navegador o por el solo hecho de abrir WhatsApp.

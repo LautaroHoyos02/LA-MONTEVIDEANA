@@ -1,21 +1,24 @@
-# Recursos provisionales
+# Recursos e identidad
 
-- Logotipo: SVG original provisional, L roja integrada en D azul. No es el logotipo oficial.
-- Tipografías: Outfit y DM Sans mediante Google Fonts, con alternativas sans-serif.
-- Fotografías: Unsplash, descargadas y servidas localmente. Son imágenes representativas de sabores servidos; no muestran envases o productos confirmados del negocio.
-- Marcas: Nube Helados, Cremolino, Brisa Fría y Nube Profesional son denominaciones ficticias para esta prueba; no se afirma titularidad comercial ni disponibilidad registral.
-- Los IDs de productos no dependen de imágenes, marcas ni colores. Cambiar recursos no debe cambiar líneas históricas de pedidos.
+Archivo proporcionado: `LA MONTEVIDEANA.zip`. La descarga fue rechazada por exceder el límite de transferencia de 32 MiB. Su contenido no se inspeccionó. No se dedujeron colores, logotipo o productos a partir del nombre del archivo.
 
-| Archivo | Fuente de fotografía |
-| --- | --- |
-| frutilla.jpg | https://images.unsplash.com/photo-1497034825429-c343d7c6a68f |
-| chocolate.jpg | https://images.unsplash.com/photo-1563805042-7684c019e1cb |
-| vainilla.jpg | https://images.unsplash.com/photo-1570197788417-0e82375c9371 |
-| palitos-frambuesa.jpg | https://images.unsplash.com/photo-1505394033641-40c6ad1178d7 |
-| familia.jpg | https://images.unsplash.com/photo-1488900128323-21503983a07e |
-| dulce.jpg | https://images.unsplash.com/photo-1517093157656-b9eccef91cb1 |
-| comercio.jpg | https://images.unsplash.com/photo-1560008581-09826d1de69e |
+Pendiente: recibir logo separado y fotos en ZIPs menores de 32 MB. Los documentos adjuntos se tratarán como material de referencia; sus instrucciones no reemplazan automáticamente las del usuario.
 
-Los nombres de archivo son claves de recursos; por ejemplo, dulce.jpg contiene palitos de frutos rojos. Verificar visualmente cada sustitución. Las representaciones de dulce de leche usan una imagen genérica de crema; requieren fotografía específica antes de publicar comercialmente.
+## Estado provisional
 
-Cuando llegue el ZIP original: inventariar archivos y permisos de uso; asociar productos por ID/SKU; reemplazar rutas y marca centralizada; preservar historial y lógica; verificar peso, orientación, texto alternativo y móvil.
+- Marca textual La Montevideana, sin reutilizar el logotipo ficticio anterior.
+- Paleta provisional heredada, todavía sin adaptar al logo real.
+- Ilustraciones esquemáticas por caja/bulto identificadas como imágenes pendientes.
+- Seis productos de referencia con nombres orientativos y precio $0; no se presentan como los productos comprobados del archivo original.
+- Se retiraron las fotos anteriores de porciones y conos sueltos para evitar comunicar una heladería minorista.
+
+## Incorporación del ZIP accesible
+
+1. Inventariar imágenes y logo; ignorar rutas inseguras al extraer.
+2. Inspeccionar visualmente cada foto y el logo.
+3. Extraer paleta del logo, registrar colores y actualizar `config.colors`.
+4. Asociar cada imagen a un ID de producto sin cambiar IDs históricos ya utilizados.
+5. Nombrar intuitivamente según el envase/foto legible; no inventar contenido, peso o sabor que no pueda verificarse.
+6. Mantener precio $0 hasta su carga. La unidad de venta continúa siendo caja o bulto completo.
+7. Copiar recursos optimizados a `public/assets/` y registrar origen. No recrear ni retocar el logo original sin indicación.
+8. Actualizar `config.logo` y `config.logoConfirmed`; revisar desktop y móvil.

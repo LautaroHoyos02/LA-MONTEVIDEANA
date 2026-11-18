@@ -1,86 +1,90 @@
-# Distribuidora Libertad — versión funcional DEMO
+# La Montevideana — DEMO mayorista
 
-Primera entrega con recursos ficticios y provisionales. **No habilitada para vender, cobrar, recibir datos personales reales ni administrar una operación comercial.**
+Actualización del modelo comercial: distribución a heladerías de productos envasados por caja o bulto. Un único precio mayorista. Pago anticipado. Costo, día y horario de entrega a coordinar por WhatsApp.
+
+**No habilitada para ventas reales.** Los precios están en $0 como pendientes de carga, no como productos gratuitos. Las solicitudes se guardan localmente y no confirman compras, pagos, stock ni entregas.
+
+## Recursos originales pendientes
+
+El archivo `LA MONTEVIDEANA.zip` adjunto supera el límite de transferencia de 32 MiB de la herramienta disponible. No se pudo abrir ni inventariar. No se afirma haber inspeccionado su logo o sus fotos.
+
+Para completar la identidad y catálogo: adjuntar el logo por separado y las fotos en ZIPs menores de 32 MB cada uno. Hasta entonces se usa una marca textual, paleta pendiente de confirmar e ilustraciones de cajas/bultos identificadas como pendientes. Los seis productos actuales tienen nombres orientativos: no se afirma que sean el inventario confirmado del ZIP.
 
 ## Qué funciona
 
-- Inicio, catálogo de 20 productos, búsqueda, filtros, orden y carga progresiva.
-- Vistas de producto, favoritos y carrito con persistencia entre recargas.
-- Checkout con retiro o entrega en zonas de prueba, cupones y descuentos por cantidad.
-- Pedidos DEMO con historial, recompra, descuento de stock local y devolución al cancelar una sola vez.
-- Perfil DEMO sin contraseña, direcciones y solicitud mayorista.
-- Aprobación, rechazo y suspensión mayorista local; precios mayoristas sujetos al mínimo por producto.
-- Panel DEMO con edición de productos e imágenes, inventario, CSV con vista previa de importación, promociones, configuración y actividad.
-- Diseño adaptable a móvil, navegación con teclado, modales con control de foco y reducción de movimiento.
+- Catálogo, búsqueda, filtros por caja/bulto, orden y detalle.
+- Favoritos y pedido con cantidades expresadas en cajas o bultos completos.
+- Precio único mayorista editable, admitiendo $0 como pendiente.
+- Stock desconocido separado de agotado: `null` = consultar; `0` = agotado informado.
+- Consulta de stock desde producto, carrito y checkout. Prepara texto de WhatsApp con productos y cantidades antes de confirmar.
+- WhatsApp con número configurado abre un mensaje para revisión y envío manual. Sin número permite copiar el texto sin inventar un contacto.
+- Solicitudes DEMO dentro de la página, historial y recompra.
+- Pago pendiente y bloqueo de preparación/despacho sin acreditación.
+- Entrega excluida del subtotal: costo, día y horario pendientes de WhatsApp.
+- Panel DEMO: edición de productos, fotografía propia, inventario, pedidos, configuración, CSV y actividad.
 
-## Límite importante
+## Qué ya no aplica
 
-Los datos se guardan **exclusivamente en localStorage de este navegador**. No hay una base compartida, autenticación comercial ni permisos de servidor. Entrar al panel no representa obtener un rol administrativo. El alojamiento privado de Sites limita visitantes a nivel plataforma; no sustituye los roles del negocio.
+No hay lista minorista, aprobación de cuentas para obtener otro precio, descuento automático por cantidad, cupones, envío gratis, tarifa fija de entrega ni turno automático. Las URL antiguas de ofertas y mayoristas llevan a Cómo comprar para conservar la navegación.
 
-El checkout registra un pedido de prueba con pago **No procesado**. No hay proveedor de pagos conectado, transferencia, correo enviado ni WhatsApp activo. El inventario no representa mercadería real.
+## Probar sin instalar
 
-## Abrir y probar
+1. Abrí la URL privada entregada en el chat.
+2. Abrí **Catálogo mayorista** y agregá cajas/bultos.
+3. En **Tu pedido**, probá **Consultar stock del pedido**. El mensaje indica producto y cantidad; no confirma existencia.
+4. Sin WhatsApp comercial configurado no hay destinatario ni envío. Copiá el texto o configurá el número confirmado desde el panel.
+5. Guardá una solicitud DEMO con datos ficticios, por ejemplo `cliente@example.invalid`.
+6. Revisá que quede **Pendiente de precio DEMO** y con pago pendiente. No se descuenta stock ni se promete entrega.
+7. En **Panel DEMO → Productos**, editá nombre, precio y presentación. Se admite $0.
+8. En **Pedidos**, intentá avanzar a preparación: debe bloquearse por falta de pago acreditado.
 
-Abrí la URL privada entregada en el chat. No necesitás instalar nada para explorarla.
+## Archivos y comandos
 
-1. En **Todos los helados**, buscá “vainilla” y abrí un producto.
-2. Agregá productos al carrito. El stock DEMO limita la cantidad.
-3. Desde un subtotal de $10.000 de ejemplo, probá `LIBERTAD10` (configuración inicial).
-4. Abrí **Mi cuenta** y creá “Cliente DEMO” con `cliente@example.invalid`.
-5. Completá el checkout con datos ficticios. Probá retiro y entrega; “Fuera de cobertura” debe impedir confirmar.
-6. Revisá la confirmación y **Mi cuenta → Mis pedidos**.
-7. En el pie, abrí **Explorar panel DEMO**. Cambiá un precio y revisá la tienda.
-8. Solicitá cuenta mayorista y aprobala desde **Clientes**. Desde seis unidades de un mismo producto se aplica el precio mayorista inicial.
-9. Revisá **Actividad**. Cancelar un pedido devuelve su stock DEMO; no puede reabrirse para evitar devolverlo dos veces.
+Carpeta original: `/workspace/sites/libertad` (la ruta técnica se conserva; el negocio se llama La Montevideana).
 
-Las condiciones anteriores son valores iniciales editables, no condiciones comerciales confirmadas.
+En VS Code: **Archivo → Abrir carpeta**, elegí el proyecto y abrí **Terminal → Nueva terminal**. Con Node.js 22+ y Python 3 instalados:
 
-## Archivos y comandos para VS Code
+```sh
+npm ci
+npm run check
+npm test
+npm run build
+python3 -m http.server 5173 --directory dist
+```
 
-Carpeta original: `/workspace/sites/libertad`. Si descargás el código, usá la carpeta donde lo hayas descomprimido.
+En Windows, el último comando puede ser `py -m http.server 5173 --directory dist`. Abrí `http://localhost:5173`. Guardá cambios con Ctrl+S/Cmd+S, ejecutá `npm run build` y recargá.
 
-1. VS Code → **Archivo → Abrir carpeta** → elegí la carpeta del proyecto.
-2. Abrí **Terminal → Nueva terminal**. Comprobá que está dentro de esa carpeta.
-3. Instalá Node.js 22 o superior y Python 3 si tu equipo no los tiene.
-4. Ejecutá `npm ci` para instalar las herramientas de prueba.
-5. Ejecutá `npm run check`, `npm test` y `npm run build`.
-6. Para servir la copia local, ejecutá `python3 -m http.server 5173 --directory dist` y abrí `http://localhost:5173`. En Windows puede ser `py -m http.server 5173 --directory dist`.
-7. Después de editar, guardá con **Ctrl+S** (Windows/Linux) o **Cmd+S** (Mac), ejecutá `npm run build` y recargá la página.
+| Modificación | Archivo y referencia exacta |
+| --- | --- |
+| Nombre, WhatsApp inicial, logo y paleta | `public/data.js`, buscar `export const config` |
+| Productos iniciales | `public/data.js`, buscar `seedProducts` |
+| Foto y texto de producto desde interfaz | Panel DEMO → Productos → Editar |
+| Cálculos, stock y mensaje WhatsApp | `public/domain.js`, buscar `totals`, `inquiryMessage` y `whatsappURL` |
+| Interfaz | `public/app.js` |
+| Componentes y responsive | `public/styles.css` |
 
-En el entorno administrado de Codex se utiliza `sites-preview` según la plataforma; no se sustituye su infraestructura si falla.
+Al recibir el logo: copiarlo a `public/assets/`, actualizar `config.logo` y `config.logoConfirmed`, extraer la paleta del archivo inspeccionado y actualizar `config.colors`. No adivinar los colores por el nombre del negocio.
 
-## Reemplazar recursos
+Los datos del panel viven en `la-montevideana-demo-v2`. Los datos anteriores permanecen en una clave separada, sin migrar productos ficticios de la primera marca a esta modalidad. Los cambios en semillas no sobreescriben automáticamente ediciones locales. Podés exportar o restablecer los datos de esta versión desde Mi cuenta.
 
-| Qué | Archivo exacto | Buscar / acción |
-| --- | --- | --- |
-| Logotipo temporal | `public/assets/logo.svg` | Reemplazar el archivo conservando el nombre; preferentemente SVG con viewBox. |
-| Colores | `public/styles.css` | Buscar `:root` y modificar variables `--blue`, `--red`, `--sky`, etc. |
-| Productos iniciales | `public/data.js` | Buscar `seedProducts`. |
-| Condiciones iniciales | `public/data.js` | Buscar `export const config`. |
-| Fotografías | `public/assets/` | Reemplazar imágenes o editar `image` del producto. |
-| Comportamiento visual | `public/app.js` | Funciones de páginas y eventos. |
-| Cálculos de compra | `public/domain.js` | Función `totals`. |
+## Versionado y publicación
 
-Si ya exploraste la tienda, el navegador conserva su copia del catálogo. Los cambios al archivo inicial no sobreescriben esa copia: usá **Mi cuenta → Restablecer demo** después de exportar lo que quieras conservar. Para reemplazar fotografías de un producto desde el panel, se admiten JPG, PNG y WebP de hasta 1 MB.
+El proyecto conserva el identificador de Sites y su audiencia privada. El nombre de la URL anterior se mantiene por compatibilidad; el título y contenido se actualizaron a La Montevideana.
 
-## Git y publicación
-
-Antes de guardar un cambio en Git ejecutá los tres comandos de verificación anteriores. Desde la terminal de la carpeta del proyecto:
+Después de verificar cambios:
 
 ```sh
 git status
-git add public docs README.md tests scripts package.json package-lock.json
-git commit -m "Describe el cambio realizado"
+git add public docs tests scripts README.md package.json package-lock.json
+git commit -m "Describe el cambio"
 git push
 ```
 
-El repositorio de esta entrega es el repositorio de fuente administrado por Sites; **no se creó un repositorio de GitHub del usuario**. Para usar GitHub más adelante, primero se deberá elegir o crear un repositorio autorizado y conectar su remoto. Un commit guarda una versión; push sincroniza la rama con su remoto. Ninguno habilita pagos.
-
-La publicación en Sites utiliza el manifiesto `.openai/hosting.json`, el commit exacto sincronizado y el artefacto de `dist/`. El proyecto conserva su identificador y el acceso privado; no cambiar la audiencia para resolver errores.
+El remoto de fuente es administrado por Sites, no se creó un repositorio GitHub del usuario. Las credenciales de publicación nunca se guardan en el código. El ZIP descargable incluye fuente y documentación, sin secretos ni datos del navegador.
 
 ## Documentación
 
-- `docs/ARQUITECTURA.md`: decisiones y separación entre DEMO y arquitectura comercial.
-- `docs/ESTADO.md`: implementado, pendiente y límites de verificación.
-- `docs/ACTIVACION.md`: servicios, variables y preparación para operar.
-- `docs/RECURSOS.md`: procedencia y sustitución de imágenes.
+- `docs/ARQUITECTURA.md`: modelo actual y controles de producción.
+- `docs/ESTADO.md`: cambios, pendientes y verificación.
+- `docs/ACTIVACION.md`: activación comercial y pagos.
+- `docs/RECURSOS.md`: recursos pendientes y procedimiento de incorporación.
