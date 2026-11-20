@@ -6,7 +6,7 @@ Código de la tienda mayorista de productos envasados por caja o bulto.
 - **Página alojada:** https://la-montevideana.excellentshark16.chatgpt.site
 - **Guía de sincronización con GitHub:** [docs/GITHUB-Y-NUBE.md](docs/GITHUB-Y-NUBE.md)
 
-Los archivos editables están descomprimidos en este repositorio. El ZIP que existía previamente se conserva como archivo anterior. El alojamiento actual no se actualiza automáticamente al hacer push a GitHub.
+Los archivos editables están descomprimidos en este repositorio. Se respetó la eliminación del ZIP anterior realizada por el propietario. El alojamiento actual no se actualiza automáticamente al hacer push a GitHub.
 
 ---
 

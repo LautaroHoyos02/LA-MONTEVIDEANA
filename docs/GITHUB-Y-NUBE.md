@@ -4,7 +4,7 @@ Repositorio: https://github.com/LautaroHoyos02/LA-MONTEVIDEANA
 
 ## Qué se sincroniza
 
-El repositorio guarda el código editable, logo, fotografías, pruebas y documentación de La Montevideana. El ZIP que ya estaba subido se conserva como archivo anterior. Los cambios actuales se realizan en los archivos descomprimidos.
+El repositorio guarda el código editable, logo, fotografías, pruebas y documentación de La Montevideana. Se conserva la eliminación del ZIP anterior realizada por el propietario. Los cambios se realizan en los archivos descomprimidos.
 
 La sincronización se hace mediante commits y push. Guardar un archivo local no lo sube a GitHub por sí solo. En este hilo, al completar cambios solicitados se comprobarán, guardarán y enviarán al repositorio.
 
