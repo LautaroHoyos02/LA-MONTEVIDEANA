@@ -35,3 +35,9 @@ La coordinación de entrega tendrá costo, fecha y franja horaria nullable hasta
 Stock y precio se validan en servidor al confirmar. Cada línea conserva presentación y precio del momento. Pagos y notificaciones requieren idempotencia. Autorización por rol en cada API; dos cuentas independientes para propietario y técnico; empleados con permisos restringidos.
 
 No se debe tomar un mensaje, una captura de transferencia, una redirección o una marca local como acreditación bancaria. La regla de pago previo se aplica antes de habilitar estados operativos.
+
+## Catálogo 3: recursos del ZIP recibido
+
+`public/catalog.js` incorpora las 50 referencias numeradas con IDs estables `lm-001` a `lm-050`. Preserva perfil, solicitudes y productos personalizados. Las referencias esquemáticas anteriores se archivan como inactivas; los pedidos históricos conservan sus líneas y precios. Los carritos con referencias anteriores requieren revisión explícita, sin asociar por suposición un producto a una foto.
+
+Los nombres son orientativos y la cantidad por empaque está pendiente. Los archivos originales se copian sin modificación. El manifiesto registra origen, dimensiones y SHA-256. El logo y colores se cargan desde la configuración central incluso en navegadores que conservaban la paleta anterior.

@@ -1,0 +1,411 @@
+{
+  "sourceArchive": "montevideana .zip",
+  "sourceArchiveSha256": "0785410484f0cdb8724fd282218760a6e801574ce35edff03add191aca7b4c26",
+  "logo": {
+    "sourceFile": "logo montevideana.webp",
+    "path": "/assets/logo-montevideana.webp",
+    "sha256": "375fe0bdb7c7239ec72abaa813d7ad4b2c67af6ba391644f64709b8c6e8eab74"
+  },
+  "products": [
+    {
+      "id": "lm-001",
+      "sourceFile": "1.webp",
+      "path": "/assets/productos/lm-001.webp",
+      "sha256": "90c0cb77844922cdaf6eb9270c72310138bebbb5804c96e87b3ee11ca98deff1",
+      "width": 1222,
+      "height": 846
+    },
+    {
+      "id": "lm-002",
+      "sourceFile": "2.webp",
+      "path": "/assets/productos/lm-002.webp",
+      "sha256": "0b0840da0cc24477fcbe0947c1a539efcbbd2d6e465664cf930b55ecef5f9d59",
+      "width": 1158,
+      "height": 1738
+    },
+    {
+      "id": "lm-003",
+      "sourceFile": "3.webp",
+      "path": "/assets/productos/lm-003.webp",
+      "sha256": "f9fcae392475484c43e087306570df20b3eadca4d6d3b561d7136f292dda77e8",
+      "width": 1150,
+      "height": 1750
+    },
+    {
+      "id": "lm-004",
+      "sourceFile": "4.webp",
+      "path": "/assets/productos/lm-004.webp",
+      "sha256": "c3554f33b34f1a86d423de44db7d010906740369cb97461bc579ff469c862b41",
+      "width": 1159,
+      "height": 1739
+    },
+    {
+      "id": "lm-005",
+      "sourceFile": "5.webp",
+      "path": "/assets/productos/lm-005.webp",
+      "sha256": "647251c668fc3678e190658859e927531ec3e842ebe93902164aaa3ff7729345",
+      "width": 1672,
+      "height": 1205
+    },
+    {
+      "id": "lm-006",
+      "sourceFile": "6.webp",
+      "path": "/assets/productos/lm-006.webp",
+      "sha256": "cf1072d8fad095e338a93d1a4c0e89323b4ff7e7db56b8c15c512fad386b7611",
+      "width": 1318,
+      "height": 1527
+    },
+    {
+      "id": "lm-007",
+      "sourceFile": "7.webp",
+      "path": "/assets/productos/lm-007.webp",
+      "sha256": "2260da78e230dc3a741e26bf221dbd115fe7eb440d0d0ad7c9da91b167faefbf",
+      "width": 1485,
+      "height": 1357
+    },
+    {
+      "id": "lm-008",
+      "sourceFile": "8.webp",
+      "path": "/assets/productos/lm-008.webp",
+      "sha256": "c095f654de1bf1eca0a0c96af9ea28807e367078ea4f9c6788ea2de0eb82952d",
+      "width": 1450,
+      "height": 1389
+    },
+    {
+      "id": "lm-009",
+      "sourceFile": "9.webp",
+      "path": "/assets/productos/lm-009.webp",
+      "sha256": "96e4b5ac439e1246bf230187d3c6dc6a01acd843fcdcbde63c7016cd9569abc3",
+      "width": 1151,
+      "height": 1750
+    },
+    {
+      "id": "lm-010",
+      "sourceFile": "10.webp",
+      "path": "/assets/productos/lm-010.webp",
+      "sha256": "024188a62d5b15cf0206a48f001cf3af4572365f949013714a0e38471bc2bf5b",
+      "width": 1110,
+      "height": 1815
+    },
+    {
+      "id": "lm-011",
+      "sourceFile": "11.webp",
+      "path": "/assets/productos/lm-011.webp",
+      "sha256": "fbb95522109b2ec71c9cfa759b89382f86e41f94e55973a3f304ee867c6d408e",
+      "width": 1110,
+      "height": 1814
+    },
+    {
+      "id": "lm-012",
+      "sourceFile": "12.webp",
+      "path": "/assets/productos/lm-012.webp",
+      "sha256": "b092a6ad83030b4832b8c0d5793a75c8766038afe8ab3c8d30e08703160f356e",
+      "width": 1110,
+      "height": 1814
+    },
+    {
+      "id": "lm-013",
+      "sourceFile": "13.webp",
+      "path": "/assets/productos/lm-013.webp",
+      "sha256": "e7d1b7e1dd7196fb42b64ab2bbf1395ba2fc03a998cb7813aaf50cf12d266ccc",
+      "width": 1455,
+      "height": 1384
+    },
+    {
+      "id": "lm-014",
+      "sourceFile": "14.webp",
+      "path": "/assets/productos/lm-014.webp",
+      "sha256": "bd59815faaef951bd56f496e01ec322de5de4d57f1607373db2582d1e8622e33",
+      "width": 1127,
+      "height": 1786
+    },
+    {
+      "id": "lm-015",
+      "sourceFile": "15.webp",
+      "path": "/assets/productos/lm-015.webp",
+      "sha256": "f6d3795fc8c5025dc1fa874c8cecf68899820c3dfb462a8777e61340598da98d",
+      "width": 1120,
+      "height": 1799
+    },
+    {
+      "id": "lm-016",
+      "sourceFile": "16.webp",
+      "path": "/assets/productos/lm-016.webp",
+      "sha256": "b57fbf7ac5bc158f85bca85f84dd5e8d0d9b61a4995c9e5f17776f3b6462373e",
+      "width": 1121,
+      "height": 1798
+    },
+    {
+      "id": "lm-017",
+      "sourceFile": "17.webp",
+      "path": "/assets/productos/lm-017.webp",
+      "sha256": "69e91957130ba2b15355bf1c528305f5ef7004dc702a4248fd266c0d1958338a",
+      "width": 1443,
+      "height": 1396
+    },
+    {
+      "id": "lm-018",
+      "sourceFile": "18.webp",
+      "path": "/assets/productos/lm-018.webp",
+      "sha256": "aad2b91fb0b5f7a3fcbe3ff78d5aa783ca6f61426b26ba00a4c96fd938ec94db",
+      "width": 1431,
+      "height": 1408
+    },
+    {
+      "id": "lm-019",
+      "sourceFile": "19.webp",
+      "path": "/assets/productos/lm-019.webp",
+      "sha256": "88cda0a1713cf436181564e9c1c0f0459f79e4ff4eb8f3cdf42ca3ee07eede36",
+      "width": 1515,
+      "height": 1330
+    },
+    {
+      "id": "lm-020",
+      "sourceFile": "20.webp",
+      "path": "/assets/productos/lm-020.webp",
+      "sha256": "76188e99638d36167e43784e6fbe02ac6a3f24e1491159036d2246a57f134596",
+      "width": 1490,
+      "height": 1352
+    },
+    {
+      "id": "lm-021",
+      "sourceFile": "21.webp",
+      "path": "/assets/productos/lm-021.webp",
+      "sha256": "fa0f85c18fe16f63f2d9ae76cce00236489811dbea5030be86af8a1357f33590",
+      "width": 1655,
+      "height": 1217
+    },
+    {
+      "id": "lm-022",
+      "sourceFile": "22.webp",
+      "path": "/assets/productos/lm-022.webp",
+      "sha256": "b7ed174614bf0f2dee2b96c19d61f5743c53c17a886c79963fd2a93034d8c28d",
+      "width": 1182,
+      "height": 1704
+    },
+    {
+      "id": "lm-023",
+      "sourceFile": "23.webp",
+      "path": "/assets/productos/lm-023.webp",
+      "sha256": "3956de2fb394c55b04fe331d1afa910ebf37ea3a0004afcd509c6011e7a23757",
+      "width": 1475,
+      "height": 1365
+    },
+    {
+      "id": "lm-024",
+      "sourceFile": "24.webp",
+      "path": "/assets/productos/lm-024.webp",
+      "sha256": "c61c55ae86b747d00f86f0afb0022bc813db9d701df8d8ebd30b26e9447139a0",
+      "width": 1738,
+      "height": 1159
+    },
+    {
+      "id": "lm-025",
+      "sourceFile": "25.webp",
+      "path": "/assets/productos/lm-025.webp",
+      "sha256": "730f3bd2230b8955f42a19f3510971709fdc043a4ce80d52f7d6d915ed8dbfb1",
+      "width": 1462,
+      "height": 1378
+    },
+    {
+      "id": "lm-026",
+      "sourceFile": "26.webp",
+      "path": "/assets/productos/lm-026.webp",
+      "sha256": "349af28ded0b82e7c3fefbdd55009b328aa243535790688922fae2dee0c0cf74",
+      "width": 1419,
+      "height": 1420
+    },
+    {
+      "id": "lm-027",
+      "sourceFile": "27.webp",
+      "path": "/assets/productos/lm-027.webp",
+      "sha256": "750841be76eb29e10a45adb33339828228b61d95b71848af74d884bf56966daf",
+      "width": 1463,
+      "height": 1458
+    },
+    {
+      "id": "lm-028",
+      "sourceFile": "28.webp",
+      "path": "/assets/productos/lm-028.webp",
+      "sha256": "7e44ffdcd154266d5a686223233e646bb51a84d498509fd27eca2d1bbea3c15a",
+      "width": 1646,
+      "height": 1479
+    },
+    {
+      "id": "lm-029",
+      "sourceFile": "29.webp",
+      "path": "/assets/productos/lm-029.webp",
+      "sha256": "ff896f4d2cc533bf5f2b723cb96811ecd4dade1b9054eb6807efc9fa9ef3021c",
+      "width": 1705,
+      "height": 1480
+    },
+    {
+      "id": "lm-030",
+      "sourceFile": "30.webp",
+      "path": "/assets/productos/lm-030.webp",
+      "sha256": "773b6d4c14aac5fd1311da5ebcac5e1d27dfafa1a731d2d9d62d0722fd48237a",
+      "width": 1928,
+      "height": 1458
+    },
+    {
+      "id": "lm-031",
+      "sourceFile": "31.webp",
+      "path": "/assets/productos/lm-031.webp",
+      "sha256": "d6d5a4c3116287a63febefc46d4ef1cdf95790c1b49ebc1e7087038319dcc88e",
+      "width": 1669,
+      "height": 1460
+    },
+    {
+      "id": "lm-032",
+      "sourceFile": "32.webp",
+      "path": "/assets/productos/lm-032.webp",
+      "sha256": "996b9d6f1eeb1fcaccc5cdf4d65a9b510e4971b88701ddabe49121c0b6de493d",
+      "width": 1718,
+      "height": 1460
+    },
+    {
+      "id": "lm-033",
+      "sourceFile": "33.webp",
+      "path": "/assets/productos/lm-033.webp",
+      "sha256": "dc208947d1e5dfa8a724e8f1fc3af21e67043dc1a563c051068685252855fcee",
+      "width": 1807,
+      "height": 1384
+    },
+    {
+      "id": "lm-034",
+      "sourceFile": "34.webp",
+      "path": "/assets/productos/lm-034.webp",
+      "sha256": "5974f704aa34c5d9113b5396853b32da7b57f3176b6a8ec7b71f167c77e6bdd9",
+      "width": 1381,
+      "height": 1306
+    },
+    {
+      "id": "lm-035",
+      "sourceFile": "35.webp",
+      "path": "/assets/productos/lm-035.webp",
+      "sha256": "46bd1ac4846facd58253837af4c85213e03384449b6dd5a8888be5c25796d0f9",
+      "width": 1342,
+      "height": 1306
+    },
+    {
+      "id": "lm-036",
+      "sourceFile": "36.webp",
+      "path": "/assets/productos/lm-036.webp",
+      "sha256": "9aac0090bbe28601ea9a81cebba859df3d85b8db3778da33aaf3e35b1d72bfb5",
+      "width": 1760,
+      "height": 1384
+    },
+    {
+      "id": "lm-037",
+      "sourceFile": "37.webp",
+      "path": "/assets/productos/lm-037.webp",
+      "sha256": "debb984945fc39d95e753fa1b151e4f3972db9d77e749126939ee0d3f77e2000",
+      "width": 1846,
+      "height": 1401
+    },
+    {
+      "id": "lm-038",
+      "sourceFile": "38.webp",
+      "path": "/assets/productos/lm-038.webp",
+      "sha256": "064a2eb066936e9786e891a8be1412301b0b65cbc17d85fe46814e97fd480d23",
+      "width": 1749,
+      "height": 1401
+    },
+    {
+      "id": "lm-039",
+      "sourceFile": "39.webp",
+      "path": "/assets/productos/lm-039.webp",
+      "sha256": "c1ef833374288ae76cf98ee64920792532cdd30fe80e414ec014f1c49e8addde",
+      "width": 1937,
+      "height": 1553
+    },
+    {
+      "id": "lm-040",
+      "sourceFile": "40.webp",
+      "path": "/assets/productos/lm-040.webp",
+      "sha256": "74d5b8f9b0946042f9482a8ecb4f089bd01e81c8484e64c8de3f64d5aad2c4e0",
+      "width": 1236,
+      "height": 1553
+    },
+    {
+      "id": "lm-041",
+      "sourceFile": "41.webp",
+      "path": "/assets/productos/lm-041.webp",
+      "sha256": "e4373a8caf2c37c999641fb86585f89370ff5859e618a3db5e697bb7201995db",
+      "width": 1961,
+      "height": 1476
+    },
+    {
+      "id": "lm-042",
+      "sourceFile": "42.webp",
+      "path": "/assets/productos/lm-042.webp",
+      "sha256": "78b5f04a29d2e2af82c9dd137b522ad55137272e7eb6711950a1feebd8689e56",
+      "width": 1181,
+      "height": 1476
+    },
+    {
+      "id": "lm-043",
+      "sourceFile": "43.webp",
+      "path": "/assets/productos/lm-043.webp",
+      "sha256": "e3f571418e839ae37a05ef74e9030d1e83eb68eed4fb53573e9719ac737019b7",
+      "width": 1398,
+      "height": 1726
+    },
+    {
+      "id": "lm-044",
+      "sourceFile": "44.webp",
+      "path": "/assets/productos/lm-044.webp",
+      "sha256": "2842b48db7e824923c8fbfe907fe20fa5727bd7610f3c0cce99e67ba3e99222d",
+      "width": 1396,
+      "height": 2268
+    },
+    {
+      "id": "lm-045",
+      "sourceFile": "45.webp",
+      "path": "/assets/productos/lm-045.webp",
+      "sha256": "550d5c0e9d24a34a4048770c837f160a09264e60060a2affccae5774cf99adcb",
+      "width": 1398,
+      "height": 1726
+    },
+    {
+      "id": "lm-046",
+      "sourceFile": "46.webp",
+      "path": "/assets/productos/lm-046.webp",
+      "sha256": "105ec549c270f49995864a2edebfacde5c95f9d6803ad43e8e9c514d3c1a7e39",
+      "width": 1914,
+      "height": 1653
+    },
+    {
+      "id": "lm-047",
+      "sourceFile": "47.webp",
+      "path": "/assets/productos/lm-047.webp",
+      "sha256": "058ea9c539b82e2b245aef99a70fffecc15631727ebe0189e39dc44aab8e21dc",
+      "width": 1698,
+      "height": 1864
+    },
+    {
+      "id": "lm-048",
+      "sourceFile": "48.webp",
+      "path": "/assets/productos/lm-048.webp",
+      "sha256": "9e1222a2a5db310055ea632cdf1fd6af9aa5f630e563fd3fe461968e495ff055",
+      "width": 1826,
+      "height": 1733
+    },
+    {
+      "id": "lm-049",
+      "sourceFile": "49.webp",
+      "path": "/assets/productos/lm-049.webp",
+      "sha256": "8138fca99dd41b0f262286ef68616ca0082f4edec61c85b56eda0c2170c85d4a",
+      "width": 1920,
+      "height": 1648
+    },
+    {
+      "id": "lm-050",
+      "sourceFile": "50.webp",
+      "path": "/assets/productos/lm-050.webp",
+      "sha256": "aeed188e12590e6301c10959667d61b95df9bd3e9093318ca30f8af8b8bcd708",
+      "width": 1452,
+      "height": 2178
+    }
+  ]
+}

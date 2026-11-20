@@ -2,7 +2,7 @@
 
 Antes de operar:
 
-- Incorporar logo y colores inspeccionados, fotos reales y catálogo verificado por producto/presentación.
+- Logo, colores y 50 imágenes ya incorporados. Confirmar nombres comerciales y contenido por caja/bulto; las fotos no confirman por sí solas unidades por empaque.
 - Confirmar contenido por caja/bulto, un único precio mayorista, stock, fichas y conservación.
 - Confirmar WhatsApp comercial y políticas de cobertura/entrega. El costo, día y horario se acuerdan por ese canal. Definir cómo se paga el costo de entrega acordado.
 - Integrar base compartida, cuentas seguras, roles de propietario/técnico y autorización del servidor.

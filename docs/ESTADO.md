@@ -1,25 +1,23 @@
-# Estado — 18 de noviembre de 2026
+# Estado — 20 de noviembre de 2026
 
-## Corregido
+## Incorporado
 
-Nombre: La Montevideana. Enfoque: distribuidor para heladerías; productos por caja o bulto. Precio único mayorista con $0 pendiente de carga. Sin precios minoristas, solicitudes de aprobación mayorista ni descuentos inventados.
+Nuevo ZIP `montevideana .zip` abierto correctamente. Logo original y 50 imágenes de productos incorporados. Azul #003796, rojo #D10F11 y blanco aplicados a la identidad del sitio. El bloqueo del ZIP anterior quedó resuelto con este archivo nuevo.
 
-Consulta previa de stock por WhatsApp preparada con el detalle del pedido. Entrega con costo, día y horario pendientes de coordinación. Pago anticipado requerido y estados operativos bloqueados sin acreditación.
+Catálogo de 50 referencias con nombres descriptivos orientativos. Todos los precios iniciales permanecen en $0 y la disponibilidad, a consultar. Se mantiene venta por caja/bulto, precio único mayorista, pago anticipado y coordinación de entrega por WhatsApp.
 
-Se conservan catálogo, favoritos, cantidades, solicitudes, historial, recompra, edición de productos/fotos, stock, CSV, configuración y auditoría como funcionalidades locales DEMO.
+Filtros por presentación y tipo de producto, búsqueda, favoritos, selección, consultas de stock y solicitudes DEMO. Se preservan edición de productos, inventario, CSV y actividad.
 
-## Bloqueo de recursos adjuntos
+## Actualización de datos locales
 
-`LA MONTEVIDEANA.zip` supera el límite de transferencia de 32 MiB. No se pudo abrir, extraer ni comprobar su contenido. No se incorporaron fotografías o logo de ese ZIP ni se extrajeron sus colores. Faltan el logo separado y archivos de fotos menores de 32 MB. Los productos son referencias orientativas, no inventario confirmado.
+La versión del catálogo incorpora las fotos en navegadores que conservaban la demo anterior. Archiva las seis referencias ilustrativas, conserva pedidos históricos, configuración y productos personalizados. Los carritos antiguos se revisan sin sustituir automáticamente sus productos. Recargar no pisa nombres y precios editados del nuevo catálogo.
 
-## Datos pendientes
+## Pendiente
 
-Número comercial de WhatsApp. La UI permite configurarlo con código de país; mientras esté vacío solo prepara texto para copiar. No se inventó un teléfono. La consulta de stock se preparó por WhatsApp como opción por defecto pendiente de confirmación del usuario.
-
-Cantidades exactas por caja/bulto, fichas, marcas, stock real y precios deben verificarse con el catálogo original. Integración de pago anticipado y base compartida siguen pendientes; no se habilitaron ventas.
+Número comercial de WhatsApp, contenido exacto por caja/bulto, precios, stock real, fichas técnicas y datos institucionales. Los nombres comerciales pueden ajustarse desde el panel. No se configuraron cobros reales ni base compartida. La versión sigue siendo DEMO y usa almacenamiento del navegador.
 
 ## Verificación
 
-Pruebas automatizadas de precio único, $0 pendiente, ausencia de tarifa de entrega, stock desconocido, cantidades por empaque, enlaces/mensajes WhatsApp y bloqueo de despacho sin pago. Recorridos con DOM simulado: solicitud, editor de precio cero, consulta y compatibilidad con datos anteriores.
+Pruebas automatizadas de precio único, $0 pendiente, stock, mensajes WhatsApp, pago previo, recorridos, actualización del catálogo y conservación del historial. Validación de los 51 archivos WebP por SHA-256 contra el manifiesto y de la relación entre las 50 referencias y sus imágenes.
 
-Resultado: 17 pruebas automatizadas aprobadas; sintaxis y build correctos. La vista previa administrada volvió a fallar al abrir la conexión de navegador en el puerto 4173 (timed out waiting for relay readiness); no se verificó visualmente en navegador. Las pruebas con DOM simulado no equivalen a una revisión visual ni a pagos bancarios reales.
+Resultado: 22 pruebas automatizadas aprobadas. La herramienta de control de navegador no está disponible en esta sesión, por lo que se omite la vista previa administrada según sus instrucciones. La revisión visual responsive permanece pendiente; los tests de DOM no equivalen a una inspección visual ni a pagos reales.
