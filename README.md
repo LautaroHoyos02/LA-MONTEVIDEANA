@@ -1,4 +1,16 @@
-# La Montevideana — DEMO mayorista
+# La Montevideana
+
+Código de la tienda mayorista de productos envasados por caja o bulto.
+
+- **Repositorio:** https://github.com/LautaroHoyos02/LA-MONTEVIDEANA
+- **Página alojada:** https://la-montevideana.excellentshark16.chatgpt.site
+- **Guía de sincronización con GitHub:** [docs/GITHUB-Y-NUBE.md](docs/GITHUB-Y-NUBE.md)
+
+Los archivos editables están descomprimidos en este repositorio. El ZIP que existía previamente se conserva como archivo anterior. El alojamiento actual no se actualiza automáticamente al hacer push a GitHub.
+
+---
+
+# Detalles técnicos y estado funcional
 
 Actualización del modelo comercial: distribución a heladerías de productos envasados por caja o bulto. Un único precio mayorista. Condiciones de pago a coordinar por WhatsApp. Costo, día y horario de entrega a coordinar por WhatsApp.
 
@@ -111,3 +123,7 @@ El sitio se publica en https://la-montevideana.excellentshark16.chatgpt.site y l
 ## Condiciones de pago
 
 Se retiró la exigencia visible de pago anticipado de portada, productos, carrito, formulario, ayuda, contacto, condiciones y mensajes de WhatsApp. La forma y condiciones de pago se coordinan por ese canal. No se agregan cobros, aprobaciones de pago ni modalidades de pago supuestas.
+
+## Sincronización de cambios
+
+El código de este repositorio se mantiene actualizado desde el entorno de trabajo mediante commits y push. El usuario solicitó sincronización de código; no se configuraron nuevos alojamientos ni bases de datos. Ver [docs/GITHUB-Y-NUBE.md](docs/GITHUB-Y-NUBE.md).
