@@ -4,7 +4,7 @@
 
 Nuevo ZIP `montevideana .zip` abierto correctamente. Logo original y 50 imágenes de productos incorporados. Azul #003796, rojo #D10F11 y blanco aplicados a la identidad del sitio. El bloqueo del ZIP anterior quedó resuelto con este archivo nuevo.
 
-Catálogo de 50 referencias con nombres descriptivos orientativos. Todos los precios iniciales permanecen en $0 y la disponibilidad, a consultar. Se mantiene venta por caja/bulto, precio único mayorista, pago anticipado y coordinación de entrega por WhatsApp.
+Catálogo de 50 referencias con nombres descriptivos orientativos. Todos los precios iniciales permanecen en $0 y la disponibilidad, a consultar. Se mantiene venta por caja/bulto, precio único mayorista y coordinación de pago y entrega por WhatsApp.
 
 Filtros por presentación y tipo de producto, búsqueda, favoritos, selección, consultas de stock y solicitudes DEMO. Se preservan edición de productos, inventario, CSV y actividad.
 
@@ -37,3 +37,7 @@ Se recorta el contenido decorativo al límite de `.showcase` con `overflow: hidd
 Se eliminan de la interfaz las menciones a DEMO, pruebas y datos ficticios. Se reemplazan por información operativa: borradores locales, precios pendientes y pago sin procesar. Se conserva la autorización de estados y no se habilitan cobros ni confirmaciones de compra. El identificador interno del almacenamiento y los estados históricos se conservan por compatibilidad; sus etiquetas públicas no muestran sufijos antiguos.
 
 La dirección se cambia a `la-montevideana` y el título ya no contiene etiquetas de demostración. No se altera la audiencia privada. El nuevo origen tiene almacenamiento local independiente; esta limpieza no agrega sincronización de datos entre direcciones.
+
+## Pago a coordinar por WhatsApp
+
+Se eliminan las menciones públicas a anticipo, pago previo y obligación de acreditar antes de preparar o despachar. Se actualizan todos los recorridos, incluidos el contacto y los textos que se copian o abren en WhatsApp. Las condiciones de pago se conversan por ese canal. No se habilitaron cobros ni se modificaron acreditaciones de pedidos.

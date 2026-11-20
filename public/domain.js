@@ -6,7 +6,7 @@ export function totals(cart,products){
 export function whatsappURL(phone,message){const value=String(phone||'').trim();if(!/^\+?[1-9][0-9\s()-]{7,22}$/.test(value))return null;const digits=value.replace(/\D/g,'');return digits.length>=8&&digits.length<=15?'https://wa.me/'+digits+'?text='+encodeURIComponent(message):null}
 export function inquiryMessage(lines,{orderNumber='',type='stock'}={}){
  const items=lines.map(p=>`• ${p.qty} ${p.saleUnit==='bulto'?(p.qty===1?'bulto':'bultos'):(p.qty===1?'caja':'cajas')} de ${p.name}`).join('\n');
- if(type==='delivery')return `Hola, La Montevideana. Quiero coordinar la entrega del pedido ${orderNumber}.\n${items}\n¿Me confirman el costo de entrega, el día y el horario? El pedido debe estar pagado antes del despacho. No tengo una entrega confirmada todavía.`;
+ if(type==='delivery')return `Hola, La Montevideana. Quiero coordinar la entrega del pedido ${orderNumber}.\n${items}\n¿Me confirman el costo de entrega, el día y el horario? También quisiera acordar la forma de pago. No tengo una entrega confirmada todavía.`;
  return `Hola, La Montevideana. Antes de confirmar mi pedido quiero consultar disponibilidad:\n${items}\n¿Hay stock de estas cantidades por caja o bulto? También necesito confirmar el precio mayorista vigente. La consulta no confirma ni reserva el pedido.`;
 }
 export function canDispatch(order){return order.payment==='Acreditado'&&!order.pricesPending&&order.total>0}

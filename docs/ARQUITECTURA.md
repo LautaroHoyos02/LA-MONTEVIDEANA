@@ -6,7 +6,7 @@
 - Productos envasados. Una cantidad representa una caja o un bulto completo.
 - Un único precio mayorista por producto/presentación, sin minoristas ni aprobaciones de lista.
 - El pedido se inicia en la página. La consulta previa de stock es opcional y está disponible en producto, carrito y checkout.
-- Pago anticipado obligatorio. Preparación y despacho requieren acreditación verificable.
+- La forma y las condiciones de pago se acuerdan por WhatsApp. La página no publica una exigencia de anticipo.
 - Costo, día y horario de entrega se coordinan por WhatsApp; no se asignan ni se incluyen automáticamente.
 - Precio inicial $0 significa pendiente, no gratuito. Un pedido con esos precios no puede ser cobrado ni tratado como pagado.
 
@@ -41,3 +41,7 @@ No se debe tomar un mensaje, una captura de transferencia, una redirección o un
 `public/catalog.js` incorpora las 50 referencias numeradas con IDs estables `lm-001` a `lm-050`. Preserva perfil, solicitudes y productos personalizados. Las referencias esquemáticas anteriores se archivan como inactivas; los pedidos históricos conservan sus líneas y precios. Los carritos con referencias anteriores requieren revisión explícita, sin asociar por suposición un producto a una foto.
 
 Los nombres son orientativos y la cantidad por empaque está pendiente. Los archivos originales se copian sin modificación. El manifiesto registra origen, dimensiones y SHA-256. El logo y colores se cargan desde la configuración central incluso en navegadores que conservaban la paleta anterior.
+
+## Actualización de presentación de pagos
+
+La configuración de pago declara `coordination: whatsapp`. Se retira `advanceRequired` de la configuración de interfaz. La revisión cambia textos y la coordinación publicada; no habilita cobros ni modifica los controles existentes de validación de borradores y acreditación. El backend comercial deberá reflejar las condiciones efectivamente acordadas con el negocio.

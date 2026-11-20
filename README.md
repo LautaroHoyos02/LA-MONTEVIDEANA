@@ -1,6 +1,6 @@
 # La Montevideana — DEMO mayorista
 
-Actualización del modelo comercial: distribución a heladerías de productos envasados por caja o bulto. Un único precio mayorista. Pago anticipado. Costo, día y horario de entrega a coordinar por WhatsApp.
+Actualización del modelo comercial: distribución a heladerías de productos envasados por caja o bulto. Un único precio mayorista. Condiciones de pago a coordinar por WhatsApp. Costo, día y horario de entrega a coordinar por WhatsApp.
 
 **No habilitada para ventas reales.** Los precios están en $0 como pendientes de carga, no como productos gratuitos. Las solicitudes se guardan localmente y no confirman compras, pagos, stock ni entregas.
 
@@ -107,3 +107,7 @@ Los enlaces de categorías usan el filtro existente por tipo de producto. Las ac
 Se retiraron las etiquetas de demostración de la interfaz, formularios, estados visibles, mensajes y archivos exportados. La documentación técnica conserva el estado real del proyecto: almacenamiento local, sin autenticación comercial de servidor ni proveedor de pagos activo. La página usa “borrador” para el guardado local; no presenta un cobro, envío o compra como confirmados.
 
 El sitio se publica en https://la-montevideana.excellentshark16.chatgpt.site y la fuente descargable se entrega como `la-montevideana.zip`. La documentación técnica permanece en ese ZIP y no se copia al directorio público de documentación.
+
+## Condiciones de pago
+
+Se retiró la exigencia visible de pago anticipado de portada, productos, carrito, formulario, ayuda, contacto, condiciones y mensajes de WhatsApp. La forma y condiciones de pago se coordinan por ese canal. No se agregan cobros, aprobaciones de pago ni modalidades de pago supuestas.
