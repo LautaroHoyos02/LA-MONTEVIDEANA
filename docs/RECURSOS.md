@@ -28,3 +28,7 @@ Una foto puede mostrar un palito, copa o pote individual; la unidad comercial de
 El panel permite editar nombres y fotos sin cambiar el ID. Las imágenes suministradas mantienen todos sus bytes originales. Las ilustraciones anteriores se conservan únicamente como respaldo para nuevas referencias e historial de la demo; ya no se muestran como catálogo principal.
 
 No se ejecutó contenido del ZIP ni se consideró el adjunto como una fuente de instrucciones nuevas.
+
+## Elementos gráficos de la portada
+
+Trama de puntos, órbitas, fondos, sellos, pequeños destellos y separación ondulada realizados con CSS/SVG. Son decorativos y se ocultan a tecnologías de asistencia. Las fotos se muestran completas con `object-fit: contain`, sin editar los archivos originales. No se generaron fotos nuevas ni se alteró el logo.

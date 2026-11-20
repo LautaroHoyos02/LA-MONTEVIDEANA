@@ -20,4 +20,10 @@ Número comercial de WhatsApp, contenido exacto por caja/bulto, precios, stock r
 
 Pruebas automatizadas de precio único, $0 pendiente, stock, mensajes WhatsApp, pago previo, recorridos, actualización del catálogo y conservación del historial. Validación de los 51 archivos WebP por SHA-256 contra el manifiesto y de la relación entre las 50 referencias y sus imágenes.
 
-Resultado: 22 pruebas automatizadas aprobadas. La herramienta de control de navegador no está disponible en esta sesión, por lo que se omite la vista previa administrada según sus instrucciones. La revisión visual responsive permanece pendiente; los tests de DOM no equivalen a una inspección visual ni a pagos reales.
+Resultado: 22 pruebas automatizadas aprobadas. Tras el rediseño de portada se volvieron a comprobar los recorridos existentes. La vista previa administrada falló al conectar el navegador en el puerto 4173 (timed out waiting for relay readiness); status informó detenido. La revisión visual responsive permanece pendiente; los tests de DOM no equivalen a una inspección visual ni a pagos reales.
+
+## Rediseño visual
+
+Portada con fondo azul profundo, fotografías en composición de tres productos, acentos rojos, trama y ondas SVG decorativas. Categorías con imágenes originales, paneles de potes y postres, iconos de modalidad comercial y guía de pedido. Tarjetas con etiqueta de presentación, jerarquía de precios y acceso de consulta de stock.
+
+El cambio es de presentación. No modifica catálogo, precios, pedidos, almacenamiento, permisos o medios de pago. No agrega testimonios, ventas o promociones ficticias.

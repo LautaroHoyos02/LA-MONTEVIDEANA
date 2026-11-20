@@ -67,7 +67,8 @@ En Windows, el último comando puede ser `py -m http.server 5173 --directory dis
 | Foto y texto de producto desde interfaz | Panel DEMO → Productos → Editar |
 | Cálculos, stock y mensaje WhatsApp | `public/domain.js`, buscar `totals`, `inquiryMessage` y `whatsappURL` |
 | Interfaz | `public/app.js` |
-| Componentes y responsive | `public/styles.css` |
+| Componentes base y responsive | `public/styles.css` |
+| Portada comercial, gráficos y presentación visual | `public/visual.css` |
 
 El logo y la paleta ya están incorporados en `config`. Para sustituirlos en el futuro, actualizar `config.logo` y `config.colors`, conservando los archivos originales.
 
@@ -94,3 +95,9 @@ El remoto de fuente es administrado por Sites, no se creó un repositorio GitHub
 - `docs/ESTADO.md`: cambios, pendientes y verificación.
 - `docs/ACTIVACION.md`: activación comercial y pagos.
 - `docs/RECURSOS.md`: recursos pendientes y procedimiento de incorporación.
+
+## Actualización visual de portada
+
+La portada usa una composición de productos reales sobre azul profundo, rojo del logo y blanco. Incluye accesos visuales a seis familias, una selección de productos, bloques de potes/postres y una guía de pedido. Las formas, trama, ondas e iconos son elementos CSS/SVG; las fotografías y el logo se conservan sin modificar.
+
+Los enlaces de categorías usan el filtro existente por tipo de producto. Las acciones de WhatsApp y carrito mantienen su comportamiento. Los estilos nuevos están en `public/visual.css`; el orden de carga es primero `styles.css` y después `visual.css`. Se incluyen reglas para móvil y para preferencia de movimiento reducido.
