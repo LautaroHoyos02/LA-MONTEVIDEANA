@@ -6,7 +6,7 @@ Código de la tienda mayorista de productos envasados por caja o bulto.
 - **Página alojada:** https://la-montevideana.excellentshark16.chatgpt.site
 - **Guía de sincronización con GitHub:** [docs/GITHUB-Y-NUBE.md](docs/GITHUB-Y-NUBE.md)
 
-Los archivos editables están descomprimidos en este repositorio. Se respetó la eliminación del ZIP anterior realizada por el propietario. El alojamiento actual no se actualiza automáticamente al hacer push a GitHub.
+Los archivos editables están descomprimidos en este repositorio. Se respetó la eliminación del ZIP anterior realizada por el propietario. La conexión de Cloudflare Pages con GitHub permite actualizar la publicación al recibir cambios en main; su activación se completa en la cuenta de Cloudflare.
 
 ---
 
@@ -127,3 +127,17 @@ Se retiró la exigencia visible de pago anticipado de portada, productos, carrit
 ## Sincronización de cambios
 
 El código de este repositorio se mantiene actualizado desde el entorno de trabajo mediante commits y push. El usuario solicitó sincronización de código; no se configuraron nuevos alojamientos ni bases de datos. Ver [docs/GITHUB-Y-NUBE.md](docs/GITHUB-Y-NUBE.md).
+
+## Publicación en Cloudflare Pages
+
+La configuración y los pasos están en [docs/CLOUDFLARE.md](docs/CLOUDFLARE.md).
+
+- Repositorio: `LautaroHoyos02/LA-MONTEVIDEANA`.
+- Rama de producción: `main`.
+- Framework: `None` (Ninguno).
+- Comando de compilación: `npm run build:cloudflare`.
+- Directorio de salida: `dist`.
+- Directorio raíz: la raíz del repositorio (dejar vacío).
+- Node.js: `22`.
+
+Este comando no requiere Python ni credenciales de Sites. Publica el frontend sin incluir archivos ZIP de código, documentación técnica o datos del navegador.

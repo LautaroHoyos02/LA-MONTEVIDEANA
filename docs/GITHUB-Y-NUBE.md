@@ -47,3 +47,7 @@ Un push a GitHub guarda el código; no se configuró un despliegue automático h
 ## Seguridad de archivos
 
 No incluir tokens, claves o archivos `.env` en los commits. `.gitignore` excluye secretos locales, dependencias, builds y archivos de trabajo. Los datos del navegador no forman parte del repositorio.
+
+## Cloudflare Pages
+
+El propietario solicitó posteriormente publicar mediante Cloudflare. Se agregó un comando de compilación independiente y la guía [CLOUDFLARE.md](CLOUDFLARE.md). La publicación se conecta al repositorio desde la cuenta de Cloudflare; no se considera activada por el solo hecho de subir estos archivos.

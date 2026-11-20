@@ -1,1 +1,15 @@
-{"name":"la-montevideana","version":"0.4.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test tests/*.test.mjs","check":"node --check public/app.js && node --check public/data.js && node --check public/domain.js && node --check public/catalog.js"},"devDependencies":{"jsdom":"^31.0.1"}}
+{
+  "name": "la-montevideana",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check public/app.js && node --check public/data.js && node --check public/domain.js && node --check public/catalog.js",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}
