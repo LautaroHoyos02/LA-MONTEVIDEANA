@@ -27,3 +27,7 @@ Resultado: 22 pruebas automatizadas aprobadas. Tras el rediseño de portada se v
 Portada con fondo azul profundo, fotografías en composición de tres productos, acentos rojos, trama y ondas SVG decorativas. Categorías con imágenes originales, paneles de potes y postres, iconos de modalidad comercial y guía de pedido. Tarjetas con etiqueta de presentación, jerarquía de precios y acceso de consulta de stock.
 
 El cambio es de presentación. No modifica catálogo, precios, pedidos, almacenamiento, permisos o medios de pago. No agrega testimonios, ventas o promociones ficticias.
+
+## Corrección de superposición en portada
+
+Se recorta el contenido decorativo al límite de `.showcase` con `overflow: hidden`. El círculo azul del pseudoelemento dejaba de respetar el límite inferior de la portada y cubría el bloque de beneficios. La onda y el resto del diseño se conservan dentro de esa sección.
