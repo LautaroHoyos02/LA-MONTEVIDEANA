@@ -76,7 +76,7 @@ Los datos del panel viven en `la-montevideana-demo-v2`. Los datos anteriores per
 
 ## Versionado y publicación
 
-El proyecto conserva el identificador de Sites y su audiencia privada. El nombre de la URL anterior se mantiene por compatibilidad; el título y contenido se actualizaron a La Montevideana.
+El proyecto conserva el identificador de Sites y su audiencia privada. La dirección de la página se actualizó a `la-montevideana`, sin la etiqueta de demostración. El almacenamiento local está ligado al origen del navegador: la nueva dirección tiene almacenamiento independiente; no se afirma que los datos del origen anterior se transfieran automáticamente.
 
 Después de verificar cambios:
 
@@ -101,3 +101,9 @@ El remoto de fuente es administrado por Sites, no se creó un repositorio GitHub
 La portada usa una composición de productos reales sobre azul profundo, rojo del logo y blanco. Incluye accesos visuales a seis familias, una selección de productos, bloques de potes/postres y una guía de pedido. Las formas, trama, ondas e iconos son elementos CSS/SVG; las fotografías y el logo se conservan sin modificar.
 
 Los enlaces de categorías usan el filtro existente por tipo de producto. Las acciones de WhatsApp y carrito mantienen su comportamiento. Los estilos nuevos están en `public/visual.css`; el orden de carga es primero `styles.css` y después `visual.css`. Se incluyen reglas para móvil y para preferencia de movimiento reducido.
+
+## Presentación comercial y límites funcionales
+
+Se retiraron las etiquetas de demostración de la interfaz, formularios, estados visibles, mensajes y archivos exportados. La documentación técnica conserva el estado real del proyecto: almacenamiento local, sin autenticación comercial de servidor ni proveedor de pagos activo. La página usa “borrador” para el guardado local; no presenta un cobro, envío o compra como confirmados.
+
+El sitio se publica en https://la-montevideana.excellentshark16.chatgpt.site y la fuente descargable se entrega como `la-montevideana.zip`. La documentación técnica permanece en ese ZIP y no se copia al directorio público de documentación.

@@ -31,3 +31,9 @@ El cambio es de presentación. No modifica catálogo, precios, pedidos, almacena
 ## Corrección de superposición en portada
 
 Se recorta el contenido decorativo al límite de `.showcase` con `overflow: hidden`. El círculo azul del pseudoelemento dejaba de respetar el límite inferior de la portada y cubría el bloque de beneficios. La onda y el resto del diseño se conservan dentro de esa sección.
+
+## Limpieza de etiquetas de demostración
+
+Se eliminan de la interfaz las menciones a DEMO, pruebas y datos ficticios. Se reemplazan por información operativa: borradores locales, precios pendientes y pago sin procesar. Se conserva la autorización de estados y no se habilitan cobros ni confirmaciones de compra. El identificador interno del almacenamiento y los estados históricos se conservan por compatibilidad; sus etiquetas públicas no muestran sufijos antiguos.
+
+La dirección se cambia a `la-montevideana` y el título ya no contiene etiquetas de demostración. No se altera la audiencia privada. El nuevo origen tiene almacenamiento local independiente; esta limpieza no agrega sincronización de datos entre direcciones.

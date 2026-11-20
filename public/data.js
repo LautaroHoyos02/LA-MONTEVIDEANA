@@ -1,38 +1,38 @@
 // Recursos originales: montevideana .zip. IDs permanentes ligados al número del archivo.
-export const config={name:'La Montevideana',city:'Santiago del Estero',demo:true,catalogVersion:3,logo:'/assets/logo-montevideana.webp',logoConfirmed:true,whatsapp:'',contact:{address:'Dirección pendiente de confirmar',email:'contacto@lamontevideana.example',hours:'Horarios pendientes de confirmar'},payment:{enabled:false,advanceRequired:true},delivery:{mode:'whatsapp',price:null,date:null,time:null},colors:{primary:'#003796',accent:'#d10f11',surface:'#edf3fc',navy:'#092c68',confirmed:true}};
+export const config={name:'La Montevideana',city:'Santiago del Estero',storageMode:'browser',catalogVersion:3,logo:'/assets/logo-montevideana.webp',logoConfirmed:true,whatsapp:'',contact:{address:'Dirección pendiente de confirmar',email:'contacto@lamontevideana.example',hours:'Horarios pendientes de confirmar'},payment:{enabled:false,advanceRequired:true},delivery:{mode:'whatsapp',price:null,date:null,time:null},colors:{primary:'#003796',accent:'#d10f11',surface:'#edf3fc',navy:'#092c68',confirmed:true}};
 export const categories=[{id:'todos',name:'Todo el catálogo'},{id:'cajas',name:'Por caja',subtitle:'Productos envasados',image:'/assets/productos/lm-001.webp',color:'#edf3fc'},{id:'bultos',name:'Por bulto',subtitle:'Presentaciones para tu comercio',image:'/assets/productos/lm-007.webp',color:'#fff0f0'}];
 // Nombres orientativos a partir de las imágenes. No se presume la cantidad por caja/bulto.
 const entries=[
 [1,'Caja de postre helado almendrado','Almendrado','caja','Postres'],
-[2,'Caja de palitos de crema y chocolate crocantes','Crema y chocolate · orientativo','caja','Palitos'],
-[3,'Caja de palitos bañados con crocante','Crema y chocolate · orientativo','caja','Palitos'],
-[4,'Caja de palitos de crema con baño blanco','Crema · orientativo','caja','Palitos'],
-[5,'Caja de alfajores helados de chocolate','Chocolate · orientativo','caja','Alfajores'],
-[6,'Caja de cucuruchos Tuo blancos','Crema · orientativo','caja','Cucuruchos'],
+[2,'Caja de palitos de crema y chocolate crocantes','Crema y chocolate','caja','Palitos'],
+[3,'Caja de palitos bañados con crocante','Crema y chocolate','caja','Palitos'],
+[4,'Caja de palitos de crema con baño blanco','Crema','caja','Palitos'],
+[5,'Caja de alfajores helados de chocolate','Chocolate','caja','Alfajores'],
+[6,'Caja de cucuruchos Tuo blancos','Crema','caja','Cucuruchos'],
 [7,'Bulto de helado Súper DDL con merengues','Dulce de leche y merengues','bulto','Potes'],
 [8,'Bulto de helado Fit Cream Chocolate y mascarpone','Chocolate amargo y mascarpone','bulto','Potes'],
-[9,'Caja de cucuruchos de chocolate','Chocolate · orientativo','caja','Cucuruchos'],
-[10,'Caja de palitos DOS de crema','Crema · orientativo','caja','Palitos'],
+[9,'Caja de cucuruchos de chocolate','Chocolate','caja','Cucuruchos'],
+[10,'Caja de palitos DOS de crema','Crema','caja','Palitos'],
 [11,'Caja de palitos Summum 3 Mix','Frutilla, manzana y naranja','caja','Palitos'],
 [12,'Caja de palitos Summum de frutilla','Frutilla','caja','Palitos'],
 [13,'Bulto de helado Fit Cream Dulce de leche y brownie','Dulce de leche split y brownie','bulto','Potes'],
 [14,'Caja de palitos Summum de limón','Limón','caja','Palitos'],
 [15,'Caja de palitos Summum Mix Frutilla y limón','Frutilla y limón','caja','Palitos'],
 [16,'Caja de palitos UP morados','Por confirmar','caja','Palitos'],
-[17,'Caja de copas Jamaica con salsa roja','Crema con salsa · orientativo','caja','Copas'],
+[17,'Caja de copas Jamaica con salsa roja','Crema con salsa','caja','Copas'],
 [18,'Caja de copas Jamaica con dulce de leche','Dulce de leche','caja','Copas'],
 [19,'Caja de copas Caribe Frutilla y crema','Frutilla y crema','caja','Copas'],
 [20,'Caja de copas Caribe Dulce de leche y chocolate','Dulce de leche y chocolate','caja','Copas'],
 [21,'Caja de copas Caribe Chocolate Chunks','Chocolate','caja','Copas'],
-[22,'Caja de cucuruchos con centro de chocolate','Chocolate · orientativo','caja','Cucuruchos'],
-[23,'Caja de bombones helados con corazón de salsa','Crema y chocolate · orientativo','caja','Bombones'],
-[24,'Caja de bombones helados rectangulares','Crema y chocolate · orientativo','caja','Bombones'],
-[25,'Caja de alfajores helados de crema','Crema y chocolate · orientativo','caja','Alfajores'],
+[22,'Caja de cucuruchos con centro de chocolate','Chocolate','caja','Cucuruchos'],
+[23,'Caja de bombones helados con corazón de salsa','Crema y chocolate','caja','Bombones'],
+[24,'Caja de bombones helados rectangulares','Crema y chocolate','caja','Bombones'],
+[25,'Caja de alfajores helados de crema','Crema y chocolate','caja','Alfajores'],
 [26,'Caja de postres Bomba de dulce de leche','Dulce de leche','caja','Postres'],
-[27,'Caja de tortas heladas Del Bosque','Frutos del bosque · orientativo','caja','Postres'],
+[27,'Caja de tortas heladas Del Bosque','Frutos del bosque','caja','Postres'],
 [28,'Bulto de helado Chocolate, dulce de leche y frutilla','Chocolate, dulce de leche granizado y frutilla a la crema','bulto','Potes'],
 [29,'Bulto de helado Chocolate, banana y dulce de leche','Chocolate, súper dulce de leche, banana split y crema americana','bulto','Potes'],
-[30,'Caja de postres Momentos Chocotramma','Chocolate · orientativo','caja','Postres'],
+[30,'Caja de postres Momentos Chocotramma','Chocolate','caja','Postres'],
 [31,'Bulto de helado Flan, dulce de leche, frutilla y granizado','Flan, dulce de leche, frutilla y granizado','bulto','Potes'],
 [32,'Caja de postres Momentos Frutilla con merengues','Frutilla y merengues','caja','Postres'],
 [33,'Bulto de helado combinado Flan y frutilla','Flan, dulce de leche, frutilla y granizado','bulto','Potes'],
@@ -51,7 +51,7 @@ const entries=[
 [46,'Bulto de helado Cookies & Cream','Americana, galletitas y dulce de leche','bulto','Potes'],
 [47,'Caja de copas Jamaica Americana y frutilla','Americana con salsa de frutilla','caja','Copas'],
 [48,'Bulto de helado Fit Cream Chocolate y frutilla','Volcán de chocolate y frutilla','bulto','Potes'],
-[49,'Caja de palitos con forma de patita','Crema y frutilla · orientativo','caja','Palitos'],
-[50,'Caja de palitos bañados en chocolate','Crema y chocolate · orientativo','caja','Palitos']
+[49,'Caja de palitos con forma de patita','Crema y frutilla','caja','Palitos'],
+[50,'Caja de palitos bañados en chocolate','Crema y chocolate','caja','Palitos']
 ];
-export const seedProducts=entries.map(([number,name,flavor,saleUnit,family])=>({id:'lm-'+String(number).padStart(3,'0'),name,flavor,saleUnit,category:saleUnit==='caja'?'cajas':'bultos',family,brand:'La Montevideana',size:(saleUnit==='caja'?'Caja':'Bulto')+' · cantidad y contenido por confirmar',image:'/assets/productos/lm-'+String(number).padStart(3,'0')+'.webp',sourceFile:number+'.webp',price:0,stock:null,active:true,provisional:false,namingProvisional:true,packagingConfirmed:false,featured:[1,7,12,19].includes(number),description:'Producto identificado a partir de la imagen suministrada de La Montevideana. Nombre orientativo y editable. Venta por '+saleUnit+' completo; cantidad de unidades y contenido por presentación pendientes de confirmación. La imagen puede mostrar una unidad individual como referencia del producto. Precio y stock pendientes de carga. Verificá ingredientes, alérgenos y conservación con la ficha del proveedor.'}));
+export const seedProducts=entries.map(([number,name,flavor,saleUnit,family])=>({id:'lm-'+String(number).padStart(3,'0'),name,flavor,saleUnit,category:saleUnit==='caja'?'cajas':'bultos',family,brand:'La Montevideana',size:(saleUnit==='caja'?'Caja':'Bulto')+' · cantidad y contenido por confirmar',image:'/assets/productos/lm-'+String(number).padStart(3,'0')+'.webp',sourceFile:number+'.webp',price:0,stock:null,active:true,provisional:false,namingProvisional:true,packagingConfirmed:false,featured:[1,7,12,19].includes(number),description:'Venta por '+saleUnit+' completo; cantidad de unidades y contenido por presentación pendientes de confirmación. La imagen puede mostrar una unidad individual como referencia del producto. Precio y stock pendientes de carga. Verificá ingredientes, alérgenos y conservación con la ficha del proveedor.'}));
