@@ -4,11 +4,11 @@
 
 Frontend estático HTML/CSS y módulos JavaScript con navegación hash y estado en localStorage. Catálogo mayorista de cajas/bultos, precio único, selección de retiro y consultas manuales por WhatsApp. No hay pagos online, procesamiento bancario, reserva de stock, autenticación comercial ni base compartida.
 
-`public/data.js` centraliza identidad, catálogo y tres sucursales. `domain.js` valida la selección, combina configuración compatible, calcula referencias y prepara texto y URL de WhatsApp. `app.js` gestiona vistas y estado local. `catalog.js` mantiene la migración de las 50 referencias y preserva ediciones e historial.
+`public/data.js` centraliza identidad, catálogo y cuatro sucursales. `domain.js` valida la selección, combina configuración compatible, calcula referencias y prepara texto y URL de WhatsApp. `app.js` gestiona vistas y estado local. `catalog.js` mantiene la migración de las 50 referencias y preserva ediciones e historial.
 
 ## Datos
 
-Sucursal: ID estable, nombre fijo, dirección, WhatsApp y horario. Se ignoran sucursales locales desconocidas; los números de otras sucursales o el contacto global nunca se usan como reemplazo.
+Sucursal: ID estable, nombre fijo, ciudad, dirección, WhatsApp y horario. Se ignoran sucursales locales desconocidas; los números de otras sucursales o el contacto global nunca se usan como reemplazo.
 
 Consulta local: ID, referencia, fecha, líneas históricas, subtotal de referencia, sucursal elegida (`branchSnapshot`), notas opcionales, huella para evitar duplicar consultas idénticas y seguimiento (`Consulta preparada`, `En seguimiento`, `Consulta cerrada`). La entrega conserva modo retiro, branchId y costo/fecha/hora `null`. El carrito se conserva. Preparar una consulta no descuenta stock ni acredita pago.
 

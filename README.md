@@ -5,13 +5,13 @@ Catálogo mayorista de productos envasados por caja o bulto. Identidad azul #003
 ## Recorrido actual
 
 1. Agregar productos y cantidades al pedido.
-2. Elegir retiro en **Avenida Solís**, **Barrio Autonomía** o **Libertad**.
+2. Elegir retiro en **Avenida Solís**, **Barrio Parque del Río**, **Barrio Autonomía** (Capital) o **Villa Rosita** (La Banda).
 3. Revisar y preparar la consulta de WhatsApp con productos, cantidades, sucursal y observaciones opcionales.
 4. Consultar stock, medios de pago, importe final, fecha de retiro y, si corresponde, fecha y costo de envío.
 
 **No hay pagos en la página, registro obligatorio, reservas automáticas ni confirmación automática de pedidos.** Preparar o abrir WhatsApp no prueba el envío del mensaje. El usuario lo revisa y envía desde WhatsApp.
 
-Las direcciones exactas y teléfonos de las tres sucursales están vacíos hasta recibirlos. Se puede copiar el mensaje; sin teléfono confirmado de la sucursal, su enlace de WhatsApp permanece desactivado. Nunca se usa otra sucursal ni el antiguo contacto global como reemplazo.
+Las ubicaciones y teléfonos de las cuatro sucursales fueron proporcionados por el propietario y están incorporados; ver `docs/SUCURSALES.md`. Se puede copiar el mensaje; sin teléfono confirmado de la sucursal, su enlace de WhatsApp permanece desactivado. Nunca se usa otra sucursal ni el antiguo contacto global como reemplazo.
 
 ## Funciones
 
@@ -39,7 +39,7 @@ Para Cloudflare Pages: framework **None**, comando **npm run build:cloudflare**,
 
 | Cambio | Archivo |
 | --- | --- |
-| Identidad y datos públicos de las tres sucursales | `public/data.js`, buscar `export const config` y `branches` |
+| Identidad y datos públicos de las cuatro sucursales | `public/data.js`, buscar `export const config` y `branches` |
 | Catálogo inicial | `public/data.js`, buscar `seedProducts` |
 | Fotografías y trazabilidad | `public/assets/productos/` y `public/assets/catalog-manifest.json` |
 | Mensaje de consulta, selección de sucursal, cálculos | `public/domain.js` |

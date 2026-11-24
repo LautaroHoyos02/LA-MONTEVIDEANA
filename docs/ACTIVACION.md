@@ -2,7 +2,7 @@
 
 El circuito actual es armar pedido, elegir sucursal y consultar por WhatsApp; no se requiere un proveedor de pagos online.
 
-- Confirmar dirección exacta y número de WhatsApp independiente de Avenida Solís, Barrio Autonomía y Libertad. Ver `SUCURSALES.md`.
+- Ubicaciones y contactos de las cuatro sucursales incorporados. Completar calle/altura adicional de barrios si el negocio la proporciona. Ver `SUCURSALES.md`.
 - Confirmar horarios y responsable de atención de cada sucursal.
 - Revisar nombres, presentación y contenido por caja/bulto; fotografías no prueban unidades por empaque.
 - Cargar el único precio mayorista cuando se confirme. $0 significa pendiente.
