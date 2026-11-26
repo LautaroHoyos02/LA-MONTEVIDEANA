@@ -18,6 +18,7 @@ export function createBackend({storage,fetch,origin}){
   activity:async()=> (await check(client.from('activity').select('*').order('at',{ascending:false}).limit(250))).map(r=>({...r,actor:r.actor||'Configuración inicial'})),
   login:(email,password)=>check(client.auth.signInWithPassword({email,password})),
   signup:(email,password,name,business)=>check(client.auth.signUp({email,password,options:{data:{name,business},emailRedirectTo:origin+'/'}})),
+  resend:email=>check(client.auth.resend({type:'signup',email,options:{emailRedirectTo:origin+'/'}})),
   reset:email=>check(client.auth.resetPasswordForEmail(email,{redirectTo:origin+'/'})),
   password:password=>check(client.auth.updateUser({password})),
   logout:()=>check(client.auth.signOut({scope:'local'})),

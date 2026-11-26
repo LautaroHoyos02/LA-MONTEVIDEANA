@@ -15,3 +15,9 @@ Pendiente del propietario: ejecutar INSTALAR.sql, configurar URLs de correo, reg
 Verificación posterior a la instalación: Auth y catálogo responden HTTP 200; hay 50 productos, cuatro sucursales e identidad pública disponible. No se verificaron credenciales ni datos privados del propietario.
 
 Se corrige una carrera entre la carga posterior al login y el evento SIGNED_IN: las solicitudes reemplazadas ahora esperan el resultado vigente. Se distinguen credenciales inválidas, correo sin confirmar, límites de intentos y errores al cargar perfil/permisos después de una autenticación aceptada. Los avisos persisten durante recargas de sesión y no muestran tokens, respuestas crudas o datos personales. No se alteran roles ni políticas de Supabase para resolver el ingreso.
+
+## Enlaces de correo vencidos
+
+Se reconoce `otp_expired` y otros errores de callback en query/hash antes de iniciar el SDK. Se retiran los parámetros de error y se abre la pantalla de confirmación, sin reflejar descripciones externas ni modificar enlaces válidos de PKCE o sesiones. Se incorpora reenvío manual de confirmación mediante el SDK, respuesta neutral y espera mínima entre solicitudes. No se envía correo al abrir la página ni se cambian confirmaciones o roles desde el navegador.
+
+La URL de Cloudflare observada en la captura del propietario es `https://la-montevideana.pages.dev/`.

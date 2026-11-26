@@ -1,6 +1,7 @@
 // Mensajes seguros: no exponer respuestas crudas, tokens o datos de otros usuarios.
 export function authErrorMessage(error){
  const code=error?.code||'';
+ if(code==='resend_cooldown')return 'Esperá al menos un minuto antes de solicitar otra confirmación. Usá el último correo recibido.';
  if(code==='email_not_confirmed')return 'Falta confirmar tu correo. Abrí el mensaje de Supabase y confirmá la cuenta antes de ingresar.';
  if(code==='invalid_credentials')return 'El correo o la contraseña no coinciden. Si no recordás la contraseña, usá «Olvidé mi contraseña».';
  if(['over_request_rate_limit','over_email_send_rate_limit'].includes(code)||error?.status===429)return 'Hubo demasiados intentos. Esperá unos minutos antes de volver a ingresar.';

@@ -78,3 +78,9 @@ Pruebas de permisos sobre PostgreSQL mediante PGlite, y recorridos de interfaz c
 ## Si falla el ingreso
 
 El mensaje de la página distingue correo sin confirmar y credenciales inválidas. En ese caso confirmá el correo o usá **Olvidé mi contraseña**; no compartas la contraseña. Si dice que el correo y la contraseña fueron aceptados pero falla la carga de la cuenta, copiá la referencia indicada: hay que revisar perfil/permisos. No reinstales tablas ni desactives RLS para resolver un error de contraseña.
+
+## Enlace de confirmación vencido o ya utilizado
+
+Abrí `https://la-montevideana.pages.dev/#/cuenta?mode=confirmar`, ingresá el correo registrado y presioná **Enviar nueva confirmación**. Revisá Spam y usá únicamente el último mensaje. Esperá al menos un minuto entre solicitudes. La página no envía correos automáticamente al abrir un enlace vencido.
+
+En Authentication → URL Configuration, la URL de producción observada es `https://la-montevideana.pages.dev/`: debe estar en Site URL y Redirect URLs si es donde se usa la web. Los errores de enlaces no se corrigen reinstalando tablas, desactivando RLS ni cambiando el rol de la cuenta. Si el enlace ya se utilizó correctamente, podés volver a Ingresar.
