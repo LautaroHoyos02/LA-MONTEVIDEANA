@@ -74,3 +74,7 @@ Para Sites: `npm run build`. Ambas compilaciones incluyen el SDK oficial empaque
 ## Verificación y límites
 
 Pruebas de permisos sobre PostgreSQL mediante PGlite, y recorridos de interfaz con Auth/API controladas: no son inicios de sesión reales en el proyecto del propietario. La instalación remota, correos, recuperación y acceso desde dispositivos reales deben verificarse después de ejecutar el SQL. La vista previa administrada falló por timeout del relay: revisión visual en navegador pendiente.
+
+## Si falla el ingreso
+
+El mensaje de la página distingue correo sin confirmar y credenciales inválidas. En ese caso confirmá el correo o usá **Olvidé mi contraseña**; no compartas la contraseña. Si dice que el correo y la contraseña fueron aceptados pero falla la carga de la cuenta, copiá la referencia indicada: hay que revisar perfil/permisos. No reinstales tablas ni desactives RLS para resolver un error de contraseña.

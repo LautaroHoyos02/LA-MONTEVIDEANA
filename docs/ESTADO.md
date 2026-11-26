@@ -9,3 +9,9 @@ Permisos por columna y RLS; precios mayoristas separados; pedidos autenticados r
 24 pruebas automatizadas aprobadas. Pruebas SQL ejecutadas sobre PostgreSQL/PGlite y recorridos de UI con Auth/API controladas. Comprobaciones sintácticas y builds de Cloudflare/Sites. No equivalen a sesiones de usuarios reales en Supabase. La vista previa administrada falló por timeout del relay, con estado detenido; revisión visual pendiente.
 
 Pendiente del propietario: ejecutar INSTALAR.sql, configurar URLs de correo, registrar/confirmar y asignar la primera cuenta administrativa. Luego validar correos y recuperación reales, probar desde dispositivos separados y cargar precios/nombres/contenido/horarios definitivos. Publicación de Cloudflare solo automática si su integración GitHub está activa; no se verificó su cuenta.
+
+## Diagnóstico de ingreso
+
+Verificación posterior a la instalación: Auth y catálogo responden HTTP 200; hay 50 productos, cuatro sucursales e identidad pública disponible. No se verificaron credenciales ni datos privados del propietario.
+
+Se corrige una carrera entre la carga posterior al login y el evento SIGNED_IN: las solicitudes reemplazadas ahora esperan el resultado vigente. Se distinguen credenciales inválidas, correo sin confirmar, límites de intentos y errores al cargar perfil/permisos después de una autenticación aceptada. Los avisos persisten durante recargas de sesión y no muestran tokens, respuestas crudas o datos personales. No se alteran roles ni políticas de Supabase para resolver el ingreso.
