@@ -1,13 +1,12 @@
-# Datos pendientes para atención comercial
+# Activación comercial
 
-El circuito actual es armar pedido, elegir sucursal y consultar por WhatsApp; no se requiere un proveedor de pagos online.
+1. Ejecutar `supabase/INSTALAR.sql` en SQL Editor. Ver `SUPABASE.md`.
+2. Configurar Site URL y Redirect URLs con las direcciones reales de la web.
+3. Registrar/confirmar cuentas administrativas y asignarlas con `supabase/ADMINISTRADOR.sql`. No compartir contraseñas; cada persona puede tener su cuenta.
+4. Probar registro, confirmación, recuperación, aprobación/rechazo/suspensión y permisos desde usuarios separados.
+5. Cargar ambos precios: minorista y mayorista. $0 es pendiente; no gratuito. El mayorista no puede superar al minorista.
+6. Confirmar horarios, contenido de cada caja/bulto, nombres, fichas e ingredientes/alérgenos. Las fotografías no confirman unidades por empaque.
+7. Revisar conservación y transporte, facturación ARCA, privacidad y condiciones aplicables.
+8. Preparar respaldo de datos y SMTP propio cuando el volumen de correos lo requiera.
 
-- Ubicaciones y contactos de las cuatro sucursales incorporados. Completar calle/altura adicional de barrios si el negocio la proporciona. Ver `SUCURSALES.md`.
-- Confirmar horarios y responsable de atención de cada sucursal.
-- Revisar nombres, presentación y contenido por caja/bulto; fotografías no prueban unidades por empaque.
-- Cargar el único precio mayorista cuando se confirme. $0 significa pendiente.
-- Acordar por WhatsApp disponibilidad, medios de pago, importe final, fecha de retiro y, si corresponde, fecha y costo de envío.
-- Confirmar conservación y transporte de congelados, fichas, ingredientes y alérgenos.
-- Revisar facturación ARCA, impuestos, privacidad y condiciones comerciales aplicables.
-
-No hay pagos en la página, reservas ni confirmaciones automáticas. El almacenamiento es local: para un panel con datos comunes se requiere backend y autorización de servidor. Los teléfonos vacíos mantienen desactivado el enlace y habilitada la copia del mensaje.
+No hay pagos online, reservas ni confirmaciones automáticas. El canal para disponibilidad, medios de pago y fechas/costo de entrega sigue siendo WhatsApp. Las consultas registradas son historial de consultas preparadas. Las de visitantes se guardan en su navegador y solo llegan al negocio si el comprador envía el mensaje.

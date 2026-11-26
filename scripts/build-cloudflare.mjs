@@ -10,7 +10,7 @@ await mkdir(output,{recursive:true});
 await cp(join(root,'public'),output,{recursive:true});
 const index=await readFile(join(output,'index.html'),'utf8');
 if(!index.includes('id="app"'))throw Error('No se encontró el punto de entrada de la aplicación.');
-const required=['app.js','catalog.js','data.js','domain.js','styles.css','visual.css','assets/logo-montevideana.webp'];
+const required=['app.js','catalog.js','data.js','domain.js','backend.js','supabase-config.js','vendor/supabase.js','styles.css','visual.css','assets/logo-montevideana.webp'];
 for(const file of required){await stat(join(output,file));}
 async function verifySize(dir){for(const entry of await readdir(dir,{withFileTypes:true})){const path=join(dir,entry.name);if(entry.isDirectory())await verifySize(path);else if((await stat(path)).size>25*1024*1024)throw Error('Archivo mayor al límite de Pages: '+entry.name)}}
 await verifySize(output);

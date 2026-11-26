@@ -2,7 +2,7 @@
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 root=Path(__file__).resolve().parent.parent
-include=['public','docs','scripts','tests','README.md','package.json','package-lock.json','.gitignore','.openai/hosting.json']
+include=['supabase','public','docs','scripts','tests','README.md','package.json','package-lock.json','.gitignore','.openai/hosting.json']
 with ZipFile(root/'dist'/'la-montevideana.zip','w',ZIP_DEFLATED) as z:
  for name in include:
   p=root/name

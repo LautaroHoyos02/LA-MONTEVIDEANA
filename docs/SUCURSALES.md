@@ -22,7 +22,7 @@ Se retiró Libertad de las opciones actuales. Su historial se conserva; volver a
 5. Hacé commit y push a `origin/main`. Cloudflare lo desplegará si la integración de Git está activa. Sites necesita su publicación independiente.
 6. Probá elegir cada sucursal y revisá el destinatario y el mensaje antes de enviarlo. No mandes mensajes de prueba a terceros.
 
-El panel **Administración → Configuración** permite editar y probar estos campos en el navegador actual. No publica esas ediciones para otros visitantes. Para publicar contactos confirmados usá el archivo anterior. Los valores públicos no vacíos prevalecen sobre ajustes locales antiguos; las sucursales mantienen sus IDs al recargar.
+Con Supabase activado, el panel **Administración → Configuración** permite guardar contactos en la base compartida para todos los visitantes. `public/data.js` y el seed SQL son solo configuración inicial y respaldo; no pisan los contactos ya editados en la base. La selección de retiro sigue guardándose en cada navegador.
 
 ## Comportamiento
 
